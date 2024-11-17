@@ -45,7 +45,7 @@ let top = ref(0)
       <img class="" src="/file.png" alt="">
     </div> -->
      <div class="row-start-4 col-start-3 z-[99] col-span-2 row-span-2 flex justify-center items-center md:col-start-4 md:row-start-2">
-      <img class="min-w-[375px] min-h-[521px]" src="/file.png" alt="">
+      <img class="min-w-[275px] min-h-[421px] max-w-[375px] max-h-[521px]" src="/file.png" alt="">
     </div>
     <!-- Spinner -->
     <div class="md:col-start-1 col-start-3 w-fit h-fit row-start-3 row-span-3 col-span-3 md:col-span-1 md:row-span-1 md:row-start-1 justify-self-center animate-spin-slow">
