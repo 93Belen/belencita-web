@@ -12,10 +12,10 @@ register();
 
 <template>
     <div class="bg-white h-fit min-h-[80vh] border-b-2 border-black md:grid md:grid-rows-1 md:grid-cols-[60%_40%]">
-        <div class="md:hidden p-5 md:p-20 h-fit">
+        <div class="md:hidden p-2 md:p-20 h-fit">
             <!-- Slider main container -->
-            <swiper-container class="mySwiper h-fit w-[80%] m-auto" effect="cards" grab-cursor="true">
-            <swiper-slide class="flex p-5 justify-center items-center backdrop-blur-sm bg-white/50 w-[90%] min-h-[600px] flex-col h-full rounded-xl border-2 border-black">
+            <swiper-container class="mySwiper h-fit w-[90%] m-auto" effect="cards" grab-cursor="true">
+            <swiper-slide class="flex p-2 justify-center items-center backdrop-blur-sm bg-white/50 w-[90%] min-h-[600px] flex-col h-full rounded-xl border-2 border-black">
                 <Spain/>
                 <div class="pt-2">
                     <h3 class="font-bold text-sm">Born and raised in the southernmost part of Spain.</h3>
@@ -26,7 +26,7 @@ register();
                     the <span class="italic">jaleo</span> in the bars, the warm evenings…</p>
                 </div>
             </swiper-slide>
-            <swiper-slide class="flex p-5 justify-center items-center backdrop-blur-sm bg-white/50 w-[90%] min-h-[600px] flex-col h-full rounded-xl border-2 border-black">
+            <swiper-slide class="flex p-2 justify-center items-center backdrop-blur-sm bg-white/50 w-[90%] min-h-[600px] flex-col h-full rounded-xl border-2 border-black">
                 <Spain/>
                 <div class="pt-2">
                     <h3 class="font-bold text-sm">At 18, I moved to Granada to study Philosophy at university.</h3>
@@ -36,7 +36,7 @@ register();
                     I had no money, neither hope, nor opportunities.</p>
                 </div>
             </swiper-slide>
-            <swiper-slide class="flex p-5 justify-center items-center backdrop-blur-sm bg-white/50 w-[90%] min-h-[600px] flex-col h-full rounded-xl border-2 border-black">
+            <swiper-slide class="flex p-2 justify-center items-center backdrop-blur-sm bg-white/50 w-[90%] min-h-[600px] flex-col h-full rounded-xl border-2 border-black">
                 <Uk/>
                 <div class="p-2">
                     <h3 class="font-bold text-sm">London changed everithing.</h3>
@@ -47,7 +47,7 @@ register();
                     </p>
                 </div>
             </swiper-slide>
-            <swiper-slide class="flex p-5 justify-center items-center backdrop-blur-sm bg-white/50 w-[90%] min-h-[600px] flex-col h-full rounded-xl border-2 border-black">
+            <swiper-slide class="flex p-2 justify-center items-center backdrop-blur-sm bg-white/50 w-[90%] min-h-[600px] flex-col h-full rounded-xl border-2 border-black">
                 <Us/>
                 <div class="p-2">
                     <h3 class="font-bold text-sm">Now I live in Kansas City...</h3>
@@ -66,7 +66,7 @@ register();
 
 <style scoped>
 swiper-slide {
-    background-image: url(./bg.png);
+    background-image: url('./bg.png');
     background-size: cover;
 }
 </style>
