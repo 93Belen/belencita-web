@@ -41,9 +41,6 @@ let top = ref(0)
       <Sun/>
     </div>
     <!-- image -->
-    <!-- <div class="row-start-1 col-start-2 items-start col-span-5 row-span-7 flex w-full z-[99] md:col-start-4 md:row-start-1 md:justify-start">
-      <img class="" src="/file.png" alt="">
-    </div> -->
      <div class="row-start-4 col-start-3 z-[99] col-span-2 row-span-2 flex justify-center items-center md:col-start-4 md:row-start-2">
       <img class="min-w-[275px] min-h-[421px] max-w-[375px] max-h-[521px] lg:max-w-[575px] lg:max-h-[821px]" src="/mehq.png" alt="">
     </div>

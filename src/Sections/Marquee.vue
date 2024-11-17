@@ -14,7 +14,7 @@ import Pinia from '../components/Tech/Pinia.vue'
 </script>
 
 <template>
-    <div class="h-[200px] bg-white border-y-2 border-black">
+    <div class="h-[20vh] min-h-[170px] bg-white border-y-2 border-black">
         <div class="relative flex overflow-x-hidden">
             <div class="py-12 animate-marquee whitespace-nowrap flex gap-16">
                 <React/>
@@ -28,17 +28,17 @@ import Pinia from '../components/Tech/Pinia.vue'
                 <Ml5/>    
             </div>
 
-  <div class="absolute top-0 py-12 pl-10 animate-marquee2 flex gap-16 whitespace-nowrap">
-     <React/>
-                <Vue/>
-                <Tailwind/>
-                <MaterialUI/>
-                <Socket/>
-                <Matter/>
-                <Three/>
-                <Ml5/>
-                <Pinia/>
-  </div>
-</div>
+            <div class="absolute top-0 py-12 pl-10 animate-marquee2 flex gap-16 whitespace-nowrap">
+                    <React/>
+                    <Tailwind/>
+                    <Vue/>
+                    <MaterialUI/>
+                    <Matter/>
+                    <Socket/>
+                    <Three/>
+                    <Pinia/>
+                    <Ml5/>  
+            </div>
+        </div>
     </div>
 </template>
