@@ -15,10 +15,10 @@ register();
         <div class="md:hidden p-2 pt-5 md:p-20 h-fit">
             <!-- Slider main container -->
             <swiper-container class="mySwiper h-fit w-[90%] m-auto" effect="cards" grab-cursor="true">
-            <swiper-slide class="flex p-2 justify-center items-center backdrop-blur-sm bg-white/50 w-[90%] min-h-[600px] flex-col h-full rounded-xl border-2 border-black">
+            <swiper-slide class="flex p-2 items-center backdrop-blur-sm bg-white/50 w-[90%] flex-col h-full rounded-xl border-2 border-black">
                 <Spain/>
                 <div class="pt-2">
-                    <h3 class="font-bold text-sm">Born and raised in the southernmost part of Spain.</h3>
+                    <h3 class="font-bold text-xs">Born and raised in the southernmost part of Spain.</h3>
                     <p class="text-xs">Here I learned the Mediterranean values that I hold closest to my heart: 
                     to enjoy the little things in life and take care of those around you, 
                     because these are the only things that truly matter.
@@ -26,20 +26,20 @@ register();
                     the <span class="italic">jaleo</span> in the bars, the warm evenings…</p>
                 </div>
             </swiper-slide>
-            <swiper-slide class="flex p-2 justify-center items-center backdrop-blur-sm bg-white/50 w-[90%] min-h-[600px] flex-col h-full rounded-xl border-2 border-black">
+            <swiper-slide class="flex p-2 items-center backdrop-blur-sm bg-white/50 w-[90%] flex-col h-full rounded-xl border-2 border-black">
                 <Spain/>
                 <div class="pt-2">
-                    <h3 class="font-bold text-sm">At 18, I moved to Granada to study Philosophy at university.</h3>
+                    <h3 class="font-bold text-xs">At 18, I moved to Granada to study Philosophy at university.</h3>
                     <p class="text-xs"> This city is the true jewel of Andalucía’s Arab past. 
                     Here I learned about Nietzsche, I made friends, we moved into a cave/house - google it - and I was happy.
                     But here I came to the hard realization that I wouldn’t have a future if I stayed in Spain. 
                     I had no money, neither hope, nor opportunities.</p>
                 </div>
             </swiper-slide>
-            <swiper-slide class="flex p-2 justify-center items-center backdrop-blur-sm bg-white/50 w-[90%] min-h-[600px] flex-col h-full rounded-xl border-2 border-black">
+            <swiper-slide class="flex p-2 items-center backdrop-blur-sm bg-white/50 w-[90%] flex-col h-full rounded-xl border-2 border-black">
                 <Uk/>
                 <div class="p-2">
-                    <h3 class="font-bold text-sm">London changed everithing.</h3>
+                    <h3 class="font-bold text-xs">London changed everithing.</h3>
                     <p class="text-xs">
                     I didn’t speak English when I arrived, but I was in my early twenties and ready for the adventure. 
                     Here I first saw a future for myself; I started cleaning tables at Whole Foods and built a career in retail.
@@ -47,10 +47,10 @@ register();
                     </p>
                 </div>
             </swiper-slide>
-            <swiper-slide class="flex p-2 justify-center items-center backdrop-blur-sm bg-white/50 w-[90%] min-h-[600px] flex-col h-full rounded-xl border-2 border-black">
+            <swiper-slide class="flex p-2 items-center backdrop-blur-sm bg-white/50 w-[90%] flex-col h-full rounded-xl border-2 border-black">
                 <Us/>
                 <div class="p-2">
-                    <h3 class="font-bold text-sm">Now I live in Kansas City...</h3>
+                    <h3 class="font-bold text-xs">Now I live in Kansas City...</h3>
                     <p class="text-xs">
                         And although it took me some time to adjust to the cultural shifts, 
                         I can proudly say that I’ve come to call it home. Here, I’ve truly taken control of my future. 
