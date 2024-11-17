@@ -15,7 +15,7 @@ register();
         <div class="md:hidden p-2 pt-5 md:p-20 h-fit">
             <!-- Slider main container -->
             <swiper-container class="mySwiper h-fit w-[90%] m-auto" effect="cards" grab-cursor="true">
-            <swiper-slide class="flex p-2 items-center backdrop-blur-sm bg-white/50 w-[90%] flex-col h-full rounded-xl border-2 border-black">
+            <swiper-slide class="flex p-5 items-center backdrop-blur-sm bg-white/50 w-[90%] flex-col h-full rounded-xl border-2 border-black">
                 <Spain/>
                 <div class="pt-2">
                     <h3 class="font-bold text-xs">Born and raised in the southernmost part of Spain.</h3>
@@ -26,7 +26,7 @@ register();
                     the <span class="italic">jaleo</span> in the bars, the warm evenings…</p>
                 </div>
             </swiper-slide>
-            <swiper-slide class="flex p-2 items-center backdrop-blur-sm bg-white/50 w-[90%] flex-col h-full rounded-xl border-2 border-black">
+            <swiper-slide class="flex p-5 items-center backdrop-blur-sm bg-white/50 w-[90%] flex-col h-full rounded-xl border-2 border-black">
                 <Spain/>
                 <div class="pt-2">
                     <h3 class="font-bold text-xs">At 18, I moved to Granada to study Philosophy at university.</h3>
@@ -36,7 +36,7 @@ register();
                     I had no money, neither hope, nor opportunities.</p>
                 </div>
             </swiper-slide>
-            <swiper-slide class="flex p-2 items-center backdrop-blur-sm bg-white/50 w-[90%] flex-col h-full rounded-xl border-2 border-black">
+            <swiper-slide class="flex p-5 items-center backdrop-blur-sm bg-white/50 w-[90%] flex-col h-full rounded-xl border-2 border-black">
                 <Uk/>
                 <div class="p-2">
                     <h3 class="font-bold text-xs">London changed everithing.</h3>
@@ -47,7 +47,7 @@ register();
                     </p>
                 </div>
             </swiper-slide>
-            <swiper-slide class="flex p-2 items-center backdrop-blur-sm bg-white/50 w-[90%] flex-col h-full rounded-xl border-2 border-black">
+            <swiper-slide class="flex p-5 items-center backdrop-blur-sm bg-white/50 w-[90%] flex-col h-full rounded-xl border-2 border-black">
                 <Us/>
                 <div class="p-2">
                     <h3 class="font-bold text-xs">Now I live in Kansas City...</h3>
