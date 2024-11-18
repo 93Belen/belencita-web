@@ -9,22 +9,35 @@ import PinkGraphic from '../components/PinkGraphic.vue'
 import Instagram from '../components/Instagram.vue'
 import {onMounted, ref, watch} from 'vue'
 
-let top = ref(0)
 
-// watch(top, () => {
-// const div = document.getElementById('blue-graphic')
-// const position = div.getBoundingClientRect()
-// top.value = position.height
-// console.log(position)
-// console.log(top.value)
-// })
-// onMounted(() => {
-// const div = document.getElementById('yellow-area')
-// const position = div.getBoundingClientRect()
-// top.value = position.height
-// console.log(position)
-// console.log(top.value)
-// })
+
+const firstElement = ref(null); // Ref for the first element
+const secondElementY = ref(0); // Y position for the second element
+
+const calculatePosition = () => {
+  firstElement.value = document.getElementById('yellow-area')
+  if (firstElement.value) {
+    // Get the bounding box of the first element
+    const rect = firstElement.value.getBoundingClientRect();
+    secondElementY.value = rect.top; // Save the Y position
+  }
+};
+
+onMounted(() => {
+  calculatePosition(); // Calculate position when the component is mounted
+});
+
+// <template>
+//   <div>
+//     <div ref="firstElement" style="margin-top: 100px;">I am the first element</div>
+//     <div
+//       :style="{ position: 'absolute', top: secondElementY + 'px', left: '100px' }"
+//     >
+//       I am aligned with the first element
+//     </div>
+//   </div>
+// </template>
+
 
 </script>
 
@@ -41,7 +54,7 @@ let top = ref(0)
       <Sun/>
     </div>
     <!-- image -->
-     <div class="row-start-4 col-start-3 z-[99] col-span-2 row-span-3 flex justify-center items-center md:col-start-4 md:row-start-1 md:items-center">
+     <div :style="{ position: 'absolute', top: secondElementY + 'px' }" class="z-[99] translate-y-[-77%] left-[20vw] md:left-[60vw]">
       <img class="min-w-[275px] min-h-[421px] max-w-[375px] max-h-[521px] lg:max-w-[575px] lg:max-h-[821px]" src="/mehq.png" alt="">
     </div>
     <!-- Spinner -->
