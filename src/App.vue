@@ -39,10 +39,16 @@ li{
   background-size: cover;
   background-position: center;
 }
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   #container {
-    background-position: 45% 40%; /* Ensure the image stays centered on smaller screens */
+    background-position: 77% 50%; /* Ensure the image stays centered on smaller screens */
   }
 }
+@media (min-width: 600px) and (max-width: 800px) {
+  #container {
+    background-position: 85% 50%; /* Ensure the image stays centered within the specified range */
+  }
+}
+
 
 </style>
