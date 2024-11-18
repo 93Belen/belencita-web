@@ -11,7 +11,8 @@ register();
 
 
 <template>
-    <div class="bg-white h-fit min-h-[80vh] border-b-2 border-black md:grid md:grid-rows-1 md:grid-cols-[60%_40%]">
+    <div class="bg-white h-fit min-h-[80vh] border-b-2 border-black md:grid md:grid-rows-1 md:grid-cols-[50%_50%] lg:grid-cols-[40%_60%]">
+        <!-- Mobile Cards Carousel -->
         <div class="md:hidden p-2 pt-5 md:p-20 h-fit">
             <!-- Slider main container -->
             <swiper-container class="mySwiper h-fit w-[90%] m-auto" effect="cards" grab-cursor="true">
@@ -61,11 +62,32 @@ register();
             </swiper-slide>
             </swiper-container>
         </div>
+        <!-- Desktop -->
+        <div class="hidden md:flex justify-center items-center px-20 pl-20">
+             <div class="pt-2">
+                    <h3 class="font-bold text-xs">Born and raised in the southernmost part of Spain.</h3>
+                    <p class="text-xs">Here I learned the Mediterranean values that I hold closest to my heart: 
+                    to enjoy the little things in life and take care of those around you, 
+                    because these are the only things that truly matter.
+                    Almeria is the humble crossroads between Africa and Europe. I miss the narrow streets, 
+                    the <span class="italic">jaleo</span> in the bars, the warm evenings…</p>
+                </div>
+        </div>
+        <div class="w-full hidden md:grid md:grid-cols-6 md:grid-rows-6">
+            <div id="maps" class="border-l-2 border-black col-start-3 col-span-4 row-start-1 row-span-6"></div>
+            <div class="row-start-4 col-start-4 col-span-2 row-span-3 md:w-[200px] md:self-center lg:self-center rotate-12"><Spain/></div>
+            <div class="row-start-1 col-start-4 col-span-3 row-span-3 md:w-[250px] justify-self-end lg:self-center rotate-[-5deg]"><Uk/></div>
+            <div class="row-start-2 col-start-1 col-span-2 row-span-3 md:w-[300px] lg:w-[450px] md:self-center rotate-[-10deg]"><Us/></div>
+        </div>
     </div>
 </template>
 
 <style scoped>
 swiper-slide {
+    background-image: url('/bg.png');
+    background-size: cover;
+}
+#maps {
     background-image: url('/bg.png');
     background-size: cover;
 }
