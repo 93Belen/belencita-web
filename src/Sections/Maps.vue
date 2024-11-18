@@ -28,16 +28,6 @@ register();
                 </div>
             </swiper-slide>
             <swiper-slide class="flex p-5 items-center backdrop-blur-sm bg-white/50 w-[90%] flex-col h-full rounded-xl border-2 border-black">
-                <Spain/>
-                <div class="pt-2">
-                    <h3 class="font-bold text-xs">At 18, I moved to Granada to study Philosophy at university.</h3>
-                    <p class="text-xs"> This city is the true jewel of Andalucía’s Arab past. 
-                    Here I learned about Nietzsche, I made friends, we moved into a cave/house - google it - and I was happy.
-                    But here I came to the hard realization that I wouldn’t have a future if I stayed in Spain. 
-                    I had no money, neither hope, nor opportunities.</p>
-                </div>
-            </swiper-slide>
-            <swiper-slide class="flex p-5 items-center backdrop-blur-sm bg-white/50 w-[90%] flex-col h-full rounded-xl border-2 border-black">
                 <Uk/>
                 <div class="p-2">
                     <h3 class="font-bold text-xs">London changed everithing.</h3>
