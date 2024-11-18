@@ -75,8 +75,8 @@ register();
         </div>
         <div class="w-full hidden md:grid md:grid-cols-6 md:grid-rows-6">
             <div id="maps" class="border-l-2 border-black col-start-3 col-span-4 row-start-1 row-span-6"></div>
-            <div class="row-start-4 col-start-4 col-span-2 row-span-3 md:w-[200px] md:self-center lg:self-center rotate-12"><Spain/></div>
-            <div class="row-start-1 col-start-4 col-span-3 row-span-3 md:w-[250px] justify-self-end lg:self-center rotate-[-5deg]"><Uk/></div>
+            <div class="row-start-4 col-start-4 col-span-2 row-span-3 md:w-[230px] md:self-center lg:self-center rotate-12"><Spain/></div>
+            <div class="row-start-1 col-start-4 lg:col-start-3 col-span-3 row-span-3 md:w-[270px] justify-self-end lg:self-center rotate-[-5deg]"><Uk/></div>
             <div class="row-start-2 col-start-1 col-span-2 row-span-3 md:w-[300px] lg:w-[450px] md:self-center rotate-[-10deg]"><Us/></div>
         </div>
     </div>
