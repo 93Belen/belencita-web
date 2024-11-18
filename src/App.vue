@@ -41,7 +41,7 @@ li{
 }
 @media (max-width: 768px) {
   #container {
-    background-position: right; /* Ensure the image stays centered on smaller screens */
+    background-position: 45% 40%; /* Ensure the image stays centered on smaller screens */
   }
 }
 
