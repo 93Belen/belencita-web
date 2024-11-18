@@ -9,10 +9,10 @@ import Maps from './Sections/Maps.vue'
 </script>
 
 <template>
-<div class="m-0 p-0 bg-darkpink">
-  <header class="bg-darkpink hidden md:flex w-full justify-end h-[10vh] font-body font-black text-md">
+<div id="container" class="m-0 p-0 bg-darkpink">
+  <header class="backdrop-blur-sm bg-gradient-to-b from-darkpink/50 to-transparent hidden md:flex w-full justify-end h-[10vh] font-body font-black text-md">
   <nav class="my-auto">
-    <ul class="flex w-[70vw] max-w-[700px] justify-around">
+    <ul class="flex w-[80vw] max-w-[700px] justify-around">
       <li class="bg-rainbow text-transparent bg-clip-text w-fit flex items-center gap-2"><Star/>me me me</li>
       <li class="bg-rainbow text-transparent bg-clip-text w-fit flex items-center gap-2"><Heart/>fidgets</li>
       <li class="bg-rainbow text-transparent bg-clip-text w-fit flex items-center gap-2"><Flower/>the universe</li>
@@ -34,4 +34,15 @@ import Maps from './Sections/Maps.vue'
 li{
    -webkit-text-stroke: 1.5px black;
 }
+#container {
+  background-image: url('/sunset.png');
+  background-size: cover;
+  background-position: center;
+}
+@media (max-width: 768px) {
+  #container {
+    background-position: right; /* Ensure the image stays centered on smaller screens */
+  }
+}
+
 </style>
