@@ -55,7 +55,7 @@ onMounted(() => {
     </div>
     <!-- image -->
      <div :style="{ position: 'absolute', top: secondElementY + 'px' }" class="z-[99] overflow-x-hidden max-w-screen translate-y-[-77%] left-[20vw] md:left-[60vw]">
-      <img class="min-w-[200px] min-h-[250px] max-w-[375px] max-h-[521px] overflow-x-hidden lg:max-w-[575px] lg:max-h-[821px]" src="/mehq.png" alt="">
+      <img class="min-w-[200px] min-h-[250px] max-w-[70vw] max-h-[100vh] overflow-x-hidden lg:max-w-[575px] lg:max-h-[821px]" src="/mehq.png" alt="">
     </div>
     <!-- Spinner -->
     <div class="md:col-start-1 col-start-3 w-fit h-fit row-start-3 row-span-3 col-span-3 md:col-span-1 md:row-span-1 md:row-start-1 justify-self-center animate-spin-slow">
