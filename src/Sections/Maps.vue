@@ -25,7 +25,7 @@ const changeCountry = (string) => {
 
 
 <template>
-    <div class="bg-white h-fit min-h-[75vh] border-b-2 border-black md:grid md:grid-rows-1 md:grid-cols-[40%_60%]">
+    <div class="bg-white h-fit py-10 md:py-0 md:min-h-[75vh] border-b-2 border-black md:grid md:grid-rows-1 md:grid-cols-[40%_60%] text-black">
         <!-- Mobile Cards Carousel -->
         <div class="md:hidden p-2 pt-5 md:p-20 h-fit">
             <!-- Slider main container -->

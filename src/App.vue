@@ -6,6 +6,7 @@ import Heart from './components/Heart.vue'
 import Flower from './components/Flower.vue'
 import Marquee from './Sections/Marquee.vue'
 import Maps from './Sections/Maps.vue'
+import Fidgets from './Sections/Fidgets.vue'
 </script>
 
 <template>
@@ -26,6 +27,8 @@ import Maps from './Sections/Maps.vue'
   <Marquee/>
 <!-- Maps Section -->
   <Maps/>
+<!-- Fidgets Section -->
+  <Fidgets/>
 </div>
 </div>
 </template>
@@ -36,19 +39,17 @@ li{
 }
 #container {
   background-image: url('/sunset.png');
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
 }
-@media (max-width: 600px) {
+@media (max-width: 850px) {
   #container {
+    background-size: cover;
     background-position: 77% 50%; /* Ensure the image stays centered on smaller screens */
   }
 }
-@media (min-width: 600px) and (max-width: 800px) {
-  #container {
-    background-position: 85% 50%; /* Ensure the image stays centered within the specified range */
-  }
-}
+
 
 
 </style>
