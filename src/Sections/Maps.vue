@@ -15,26 +15,23 @@ register();
         <!-- Mobile Cards Carousel -->
         <div class="md:hidden p-2 pt-5 md:p-20 h-fit">
             <!-- Slider main container -->
-            <swiper-container class="mySwiper h-fit w-[90%] m-auto" effect="cards" grab-cursor="true">
+            <swiper-container class="mySwiper h-fit w-[85%] m-auto" effect="cards" grab-cursor="true">
             <swiper-slide class="flex p-5 items-center backdrop-blur-sm bg-white/50 w-[90%] flex-col h-full rounded-xl border-2 border-black">
                 <Spain/>
                 <div class="pt-2">
                     <h3 class="font-bold text-xs">Born and raised in the southernmost part of Spain.</h3>
-                    <p class="text-xs">Here I learned the Mediterranean values that I hold closest to my heart: 
-                    to enjoy the little things in life and take care of those around you, 
-                    because these are the only things that truly matter.
-                    Almeria is the humble crossroads between Africa and Europe. I miss the narrow streets, 
-                    the <span class="italic">jaleo</span> in the bars, the warm evenings…</p>
+                    <p class="text-xs">
+                    Andalucia is the humble crossroads between Africa and Europe. I miss the narrow streets, 
+                    the <span class="italic">jaleo</span> in the bars, its moorish charm, and the warm evenings by the mediterranean sea.</p>
                 </div>
             </swiper-slide>
             <swiper-slide class="flex p-5 items-center backdrop-blur-sm bg-white/50 w-[90%] flex-col h-full rounded-xl border-2 border-black">
                 <Uk/>
                 <div class="p-2">
-                    <h3 class="font-bold text-xs">London changed everithing.</h3>
+                    <h3 class="font-bold text-xs">London changed <span class="italic">everything</span>.</h3>
                     <p class="text-xs">
-                    I didn’t speak English when I arrived, but I was in my early twenties and ready for the adventure. 
-                    Here I first saw a future for myself; I started cleaning tables at Whole Foods and built a career in retail.
-                    I made friends from all over the world, and met my husband. London enriched my world and the possibilities stored for me.
+                    I didn’t speak English when I arrived, but I got a job cleaning tables and built a career in retail.
+                    Here, I made friends from all over the world, met my husband, and completely changed my life.
                     </p>
                 </div>
             </swiper-slide>
@@ -43,9 +40,7 @@ register();
                 <div class="p-2">
                     <h3 class="font-bold text-xs">Now I live in Kansas City...</h3>
                     <p class="text-xs">
-                        And although it took me some time to adjust to the cultural shifts, 
-                        I can proudly say that I’ve come to call it home. Here, I’ve truly taken control of my future. 
-                        I’ve worked hard to build a career in tech, and I’ve been given opportunities I never could have dreamed of.
+                    And after many cultural shocks, I’ve come to call it home. Here, I’ve been given opportunities I never dreamed of.
                     But most importantly, I adopted my dog, Troy—the true spark of my life and my best friend in the entire universe.
                     </p>
                 </div>
