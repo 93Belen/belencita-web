@@ -25,7 +25,7 @@ const changeCountry = (string) => {
 
 
 <template>
-    <div class="bg-white h-fit min-h-[75vh] border-b-2 border-black md:grid md:grid-rows-1 md:grid-cols-[50%_50%] lg:grid-cols-[40%_60%]">
+    <div class="bg-white h-fit min-h-[75vh] border-b-2 border-black md:grid md:grid-rows-1 md:grid-cols-[40%_60%]">
         <!-- Mobile Cards Carousel -->
         <div class="md:hidden p-2 pt-5 md:p-20 h-fit">
             <!-- Slider main container -->
@@ -96,7 +96,7 @@ const changeCountry = (string) => {
             </div>
             <div @click="changeCountry('us')" class="cursor-pointer row-start-2 col-start-1 col-span-2 row-span-3 md:w-[300px] lg:w-[450px] md:self-center rotate-[-10deg] grid grid-col-1 grid-row-1">
                 <p class="m-auto row-start-1 col-start-1 z-[99] rotate-[10deg]">Kansas City</p>
-                <div class="m-auto row-start-1 col-start-1"><Us/></div>
+                <div class="m-auto row-start-1 col-start-1 lg:min-w-[400px]"><Us/></div>
             </div>
         </div>
     </div>
