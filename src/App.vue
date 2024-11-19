@@ -38,7 +38,7 @@ li{
    -webkit-text-stroke: 1.5px black;
 }
 #container {
-  background-image: url('/sunset.png');
+  background-image: url('/sunset2.png');
   background-size: contain;
   background-position: top;
   background-repeat: no-repeat;
@@ -46,10 +46,9 @@ li{
 @media (max-width: 850px) {
   #container {
     background-size: cover;
-    background-position: 77% 50%; /* Ensure the image stays centered on smaller screens */
+    background-position: center; /* Ensure the image stays centered on smaller screens */
   }
 }
-
 
 
 </style>
