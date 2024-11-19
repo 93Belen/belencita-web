@@ -48,7 +48,7 @@ onMounted(() => {
     </div>
     <div class="px-5 md:px-20 sm:col-start-1 col-span-4 row-start-2 sm:col-span-3 col-start-1 md:row-start-4 md:col-start-1 md:row-span-2 self-start md:relative pt-1">
       <TheBest/>
-      <h2 class="text-yellow md:text-darkpink col-span-4 font-subtitle text-xs md:text-md justify-self-end 2xl:justify-self-start z-[99]">Just a Wicked Woke Witch</h2>
+      <h2 class="text-yellow ml-[10px] md:ml-0 md:text-darkpink col-span-4 font-subtitle text-xs md:text-md justify-self-end 2xl:justify-self-start z-[99]">Just a Wicked Woke Witch</h2>
     </div>
     <div class="col-start-5 row-start-1 p-2 pt-5 md:hidden w-[90%]">
       <Sun/>
