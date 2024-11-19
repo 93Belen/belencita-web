@@ -9,7 +9,7 @@ import Maps from './Sections/Maps.vue'
 </script>
 
 <template>
-<div id="container" class="m-0 p-0 bg-darkpink">
+<div id="container" class="m-0 p-0 bg-darkpink overflow-x-hidden">
   <header class="backdrop-blur-sm bg-gradient-to-b from-darkpink/50 to-transparent hidden md:flex w-full justify-end h-[10vh] font-body font-black text-md">
   <nav class="my-auto">
     <ul class="flex w-[80vw] max-w-[700px] justify-around">
