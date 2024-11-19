@@ -7,7 +7,7 @@ import BlueGraphic from '../components/BlueGraphic.vue'
 import GreenGraphic from '../components/GreenGraphic.vue'
 import PinkGraphic from '../components/PinkGraphic.vue'
 import Instagram from '../components/Instagram.vue'
-import {onMounted, ref, watch} from 'vue'
+import {onMounted, ref } from 'vue'
 
 
 
@@ -27,16 +27,6 @@ onMounted(() => {
   calculatePosition(); // Calculate position when the component is mounted
 });
 
-// <template>
-//   <div>
-//     <div ref="firstElement" style="margin-top: 100px;">I am the first element</div>
-//     <div
-//       :style="{ position: 'absolute', top: secondElementY + 'px', left: '100px' }"
-//     >
-//       I am aligned with the first element
-//     </div>
-//   </div>
-// </template>
 
 
 </script>

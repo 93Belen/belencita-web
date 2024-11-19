@@ -8,7 +8,8 @@ export default {
     fontFamily: {
       'display': ['"Press Start 2P"'],
       'subtitle':['"Finger Paint"'],
-      'body': ['"Montserrat"']
+      'body': ['"Montserrat"'],
+      'alternates': ['"Montserrat Alternates"']
     },
     colors: {
       'darkpink': '#FF99C8',
