@@ -5,12 +5,12 @@
 <template>
     <div class="h-screen w-screen bg-white pt-10">
         <div role="tablist" class="tabs tabs-lifted md:hidden grid-cols-5">
-            <input type="radio" name="my_tabs_2" role="tab" class="tab tab-active bg-purple [--tab-bg:#CEBAF0] [--tab-border-color:transparent]" aria-label="" />
+            <input type="radio" name="my_tabs_2" role="tab" class="tab bg-purple [--tab-bg:#CEBAF0] [--tab-border-color:transparent]" aria-label="" />
             <div role="tabpanel" class="tab-content bg-purple p-6 h-[90vh]">
                 Tab content 1
             </div>
 
-            <input type="radio" name="my_tabs_2" role="tab" class="tab bg-yellow [--tab-bg:#FCF6BD] [--tab-border-color:transparent]"  aria-label="" />
+            <input type="radio" name="my_tabs_2" role="tab" class="tab bg-yellow tab-active [--tab-bg:#FCF6BD] [--tab-border-color:transparent]"  aria-label="" />
             <div role="tabpanel" class="tab-content bg-yellow p-6 h-[90vh]">
                 Tab content 2
             </div>
