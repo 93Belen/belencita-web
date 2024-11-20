@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div class="h-[70vh] md:h-screen w-screen bg-white pt-10">
+    <div class="h-[70vh] overflow-hidden md:h-screen w-screen bg-white pt-10">
         <!-- Mobile -->
         <div role="tablist" class="tabs h-full tabs-lifted md:hidden grid-cols-5">
             <input type="radio" name="my_tabs_2" role="tab" class="tab bg-purple tab-active [--tab-bg:#CEBAF0] [--tab-border-color:transparent]" aria-label="" />
