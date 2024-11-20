@@ -11,7 +11,7 @@ import Fidgets from './Sections/Fidgets.vue'
 
 <template>
 <div id="container" class="m-0 p-0 bg-darkpink overflow-x-hidden">
-  <header class="backdrop-blur-sm bg-gradient-to-b from-darkpink/50 to-transparent hidden md:flex w-full justify-end h-[10vh] font-body font-black text-md">
+  <header class="backdrop-blur-sm bg-gradient-to-b from-darkpink/50 via-transparent via-60% hidden md:flex w-full justify-end h-[10vh] font-body font-black text-md">
   <nav class="my-auto">
     <ul class="flex w-[80vw] max-w-[700px] justify-around">
       <li class="bg-rainbow text-transparent bg-clip-text w-fit flex items-center gap-2"><Star/>me me me</li>

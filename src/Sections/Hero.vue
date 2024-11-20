@@ -32,7 +32,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="h-screen md:h-[90vh] grid grid-cols-5 grid-rows-10 md:grid-rows-5 overflow-x-hidden">
+    <div class="h-[90vh] grid grid-cols-5 grid-rows-10 md:grid-rows-5 overflow-x-hidden">
     <div class="px-5 row-start-1 sm:col-start-1 col-start-1 md:px-20 col-span-4 sm:col-span-3 md:row-start-3 md:col-start-1 self-end pb-1">
       <Belencita/>
     </div>

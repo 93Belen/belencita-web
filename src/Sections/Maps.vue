@@ -4,31 +4,37 @@ import Uk from '../components/Countries/Uk.vue'
 import Us from '../components/Countries/Us.vue'
 import DarkBlueGraphic from '../components/DarkBlueGraphic.vue'
 import OrangeGraphic from '../components/OrangeGraphic.vue'
-import {onMounted, ref } from 'vue'
+import {onMounted, onUnmounted, onUpdated, ref } from 'vue'
 import { register } from 'swiper/element/bundle';
 import anime from 'animejs/lib/anime.es.js';
 // register Swiper custom elements
 register();
+const country = ref('spain');
+let animation;
 
 onMounted(() => {
-    const p = document.querySelectorAll('.location-text');
+    animateText()
+});
+
+const animateText = () => {
+const p = document.querySelectorAll('.location-text');
+
     p.forEach(tag => {
         const text = tag.textContent;
         const letters = text.split('');
         
-        // Empty the content of the paragraph and wrap each letter in a span
         tag.innerHTML = ''; // clear the paragraph content
 
         letters.forEach((letter, index) => {
-            const span = document.createElement('span'); // create a span for each letter
+            const span = document.createElement('span'); 
             span.classList.add('inline-block'); 
-            span.textContent = letter; // set the letter as the content
-            tag.appendChild(span); // append the span to the paragraph
+            span.textContent = letter; 
+            tag.appendChild(span);
         });
     });
 
     const spans = document.getElementsByTagName('span')
-    anime({
+    animation = anime({
       targets: spans,
       translateY: [
         { value: '-5px', duration: 500, easing: 'easeInOutQuad' }, // Move up
@@ -39,10 +45,13 @@ onMounted(() => {
       delay: anime.stagger(100, { start: 0 }), // Delay between each letter's animation
       loop: true, // Infinite loop for the animation
     });
-});
+}
+onUnmounted(() => {
+    animation.remove('span')
+})
 
 
-const country = ref('spain');
+
 
 const changeCountry = (string) => {
     country.value = string
@@ -117,18 +126,18 @@ const changeCountry = (string) => {
             </div>
             <div class="hidden lg:block z-[0] col-start-3 row-start-3 relative left-10"><OrangeGraphic /></div>
         </div>
-        <div class="w-full hidden md:grid md:grid-cols-6 md:grid-rows-6 text-md font-medium font-alternates">
+        <div class="w-full hidden md:grid md:grid-cols-6 md:grid-rows-6 text-white text-md font-medium font-alternates">
             <div id="maps" class="border-l-2 border-black col-start-3 col-span-4 row-start-1 row-span-6"></div>
             <div @click="changeCountry('spain')" class="cursor-pointer row-start-4 col-start-4 col-span-2 row-span-3 md:w-[230px] md:self-center lg:self-center rotate-12 grid grid-col-1 grid-row-1">
-                <p class="location-text justify-self-center mb-5 self-end row-start-1 col-start-1 z-[99] rotate-[-10deg] hover:text-white transition-colors duration-500">Almeria</p>
+                <p :class="country === 'spain' ? 'text-[#69686A]' : 'text-white'" id="spain" class="location-text justify-self-center mb-5 self-end row-start-1 col-start-1 z-[99] rotate-[-10deg] hover:text-[#69686A] transition-colors duration-500">Almeria</p>
                 <div class="m-auto row-start-1 col-start-1"><Spain/></div>
             </div>
             <div @click="changeCountry('uk')" class="cursor-pointer row-start-1 col-start-4 xl:col-start-3 col-span-3 row-span-2 md:w-[270px] justify-self-end lg:self-center rotate-[-5deg] grid grid-col-1 grid-row-1">
-                <p class="location-text justify-self-center mb-5 self-end ml-2 row-start-1 col-start-1 z-[99] rotate-[5deg] hover:text-white transition-colors duration-500">London</p>
+                <p :class="country === 'uk' ? 'text-[#69686A]' : 'text-white'" id="uk" class="location-text justify-self-center mb-5 self-end ml-2 row-start-1 col-start-1 z-[99] rotate-[5deg] hover:text-[#69686A] transition-colors duration-500">London</p>
                 <div class="m-auto row-start-1 col-start-1"><Uk/></div>
             </div>
             <div @click="changeCountry('us')" class="cursor-pointer row-start-2 col-start-1 col-span-2 row-span-3 md:w-[300px] lg:w-[450px] md:self-center rotate-[-10deg] grid grid-col-1 grid-row-1">
-                <p class="location-text m-auto row-start-1 col-start-1 z-[99] rotate-[10deg] hover:text-white transition-colors duration-500">Kansas City</p>
+                <p :class="country === 'us' ? 'text-[#69686A]' : 'text-white'" id="us" class="location-text m-auto row-start-1 col-start-1 z-[99] rotate-[10deg] hover:text-[#69686A] transition-colors duration-500">Kansas City</p>
                 <div class="m-auto row-start-1 col-start-1 lg:min-w-[400px]"><Us/></div>
             </div>
         </div>
