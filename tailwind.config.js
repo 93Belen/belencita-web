@@ -48,6 +48,8 @@ export default {
         'spin-slow': 'spin 5s linear infinite',
         'marquee': 'marquee 50s linear infinite',
         'marquee2': 'marquee2 50s linear infinite',
+        'wavy': 'wavy 5s linear infinite',
+        'wavy-reverse': 'wavyreverse 5s linear infinite'
       },
       keyframes: {
         marquee: {
@@ -58,6 +60,14 @@ export default {
           '0%': { transform: 'translateX(100%)' },
           '100%': { transform: 'translateX(0%)' },
         },
+        wavy: {
+          '0%': { transform: 'translateY(100px)' },
+          '100%': { transform: 'translateY(-100px)' },
+        },
+        wavyreverse: {
+          '0%': { transform: 'translateY(-100px)' },
+          '100%': { transform: 'translateY(100px)' },
+        }
       },
       // spacing: {
       //   '128': '32rem',
