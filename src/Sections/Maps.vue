@@ -65,9 +65,9 @@ const changeCountry = (string) => {
             </swiper-container>
         </div>
         <!-- Desktop -->
-        <div class="hidden md:flex justify-center items-center pl-20 text-md">
-            <div class="w-[500px] relative top-[-15vh] left-[5vw] z-[0]"><DarkBlueGraphic/></div>
-             <div v-if="country === 'spain'" class="pt-2 z-[99]">
+        <div class="hidden md:grid grid-cols-3 grid-rows-3 justify-center items-center pl-20 lg:pl-36 py-12 text-md lg:text-lg">
+            <div class="hidden lg:block col-start-1 row-start-1 z-[0] relative right-10"><DarkBlueGraphic/></div>
+             <div v-if="country === 'spain'" class="pt-2 z-[99] col-start-1 col-span-3 row-start-1 row-span-3">
                 <h3 class="font-bold">From the southernmost part of Spain.</h3>
                 <p class="">
                 Almeria is the humble crossroads between Africa and Europe. I miss the narrow streets, 
@@ -87,7 +87,7 @@ const changeCountry = (string) => {
                     But most importantly, I adopted my dog, Troy—the true spark of my life and my best friend in the entire universe.
                 </p>
             </div>
-            <div class="w-[500px] relative top-[15vh] left-[-5vw] z-[0]"><OrangeGraphic /></div>
+            <div class="hidden lg:block z-[0] col-start-3 row-start-3 relative left-10"><OrangeGraphic /></div>
         </div>
         <div class="w-full hidden md:grid md:grid-cols-6 md:grid-rows-6 text-md font-regular font-alternates">
             <div id="maps" class="border-l-2 border-black col-start-3 col-span-4 row-start-1 row-span-6"></div>

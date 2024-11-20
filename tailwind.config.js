@@ -32,7 +32,7 @@ export default {
       'xs': '15px',
       'sm': '20px',
       'md': '24px',
-      'lg': '40px',
+      'lg': '28px',
       'xl': '50px',
       '2xl': '70px',
       '3xl': '200px'
