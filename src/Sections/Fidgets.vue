@@ -3,14 +3,15 @@
 </script>
 
 <template>
-    <div class="h-screen w-screen bg-white pt-10">
+    <div class="h-[70vh] md:h-screen w-screen bg-white pt-10">
+        <!-- Mobile -->
         <div role="tablist" class="tabs tabs-lifted md:hidden grid-cols-5">
-            <input type="radio" name="my_tabs_2" role="tab" class="tab bg-purple [--tab-bg:#CEBAF0] [--tab-border-color:transparent]" aria-label="" />
+            <input type="radio" name="my_tabs_2" role="tab" class="tab bg-purple tab-active [--tab-bg:#CEBAF0] [--tab-border-color:transparent]" aria-label="" />
             <div role="tabpanel" class="tab-content bg-purple p-6 h-[90vh]">
                 Tab content 1
             </div>
 
-            <input type="radio" name="my_tabs_2" role="tab" class="tab bg-yellow tab-active [--tab-bg:#FCF6BD] [--tab-border-color:transparent]"  aria-label="" />
+            <input type="radio" name="my_tabs_2" role="tab" class="tab bg-yellow [--tab-bg:#FCF6BD] [--tab-border-color:transparent]"  aria-label="" />
             <div role="tabpanel" class="tab-content bg-yellow p-6 h-[90vh]">
                 Tab content 2
             </div>
@@ -30,9 +31,30 @@
                 Tab content 5
             </div>
         </div>
+        <!-- Desktop -->
+       <div class="hidden h-full md:grid grid-cols-3 grid-rows-4">
+            <div class="mockup-window bg-yellow border">
+                <div class="bg-white flex justify-center h-full px-4 py-16">Hello!</div>
+            </div>
+            <div class="mockup-window bg-orange row-span-2 border">
+                <div class="bg-white flex justify-center h-full px-4 py-16">Hello!</div>
+            </div>
+            <div class="mockup-window bg-pink row-span-4 border">
+                <div class="bg-white flex justify-center h-full px-4 py-16">Hello!</div>
+            </div>
+            <div class="mockup-window bg-purple col-start-1 row-span-3 border">
+                <div class="bg-white flex justify-center h-full px-4 py-16">Hello!</div>
+            </div>
+            <div class="mockup-window bg-blue row-span-2 border">
+                <div class="bg-white flex justify-center h-full px-4 py-16">Hello!</div>
+            </div>
+       </div>
     </div>
 </template>
 
 <style scoped>
-
+.mockup-window:before {
+color: #D0F4DD;
+opacity: 1;
+}
 </style>
