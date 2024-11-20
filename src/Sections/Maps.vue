@@ -117,18 +117,18 @@ const changeCountry = (string) => {
             </div>
             <div class="hidden lg:block z-[0] col-start-3 row-start-3 relative left-10"><OrangeGraphic /></div>
         </div>
-        <div class="w-full hidden md:grid md:grid-cols-6 md:grid-rows-6 text-md font-regular font-alternates">
+        <div class="w-full hidden md:grid md:grid-cols-6 md:grid-rows-6 text-md font-medium font-alternates">
             <div id="maps" class="border-l-2 border-black col-start-3 col-span-4 row-start-1 row-span-6"></div>
             <div @click="changeCountry('spain')" class="cursor-pointer row-start-4 col-start-4 col-span-2 row-span-3 md:w-[230px] md:self-center lg:self-center rotate-12 grid grid-col-1 grid-row-1">
-                <p class="location-text justify-self-center mb-5 self-end row-start-1 col-start-1 z-[99] rotate-[-10deg]">Almeria</p>
+                <p class="location-text justify-self-center mb-5 self-end row-start-1 col-start-1 z-[99] rotate-[-10deg] hover:text-white transition-colors duration-500">Almeria</p>
                 <div class="m-auto row-start-1 col-start-1"><Spain/></div>
             </div>
             <div @click="changeCountry('uk')" class="cursor-pointer row-start-1 col-start-4 xl:col-start-3 col-span-3 row-span-2 md:w-[270px] justify-self-end lg:self-center rotate-[-5deg] grid grid-col-1 grid-row-1">
-                <p class="location-text justify-self-center mb-5 self-end ml-2 row-start-1 col-start-1 z-[99] rotate-[5deg]">London</p>
+                <p class="location-text justify-self-center mb-5 self-end ml-2 row-start-1 col-start-1 z-[99] rotate-[5deg] hover:text-white transition-colors duration-500">London</p>
                 <div class="m-auto row-start-1 col-start-1"><Uk/></div>
             </div>
             <div @click="changeCountry('us')" class="cursor-pointer row-start-2 col-start-1 col-span-2 row-span-3 md:w-[300px] lg:w-[450px] md:self-center rotate-[-10deg] grid grid-col-1 grid-row-1">
-                <p class="location-text m-auto row-start-1 col-start-1 z-[99] rotate-[10deg]">Kansas City</p>
+                <p class="location-text m-auto row-start-1 col-start-1 z-[99] rotate-[10deg] hover:text-white transition-colors duration-500">Kansas City</p>
                 <div class="m-auto row-start-1 col-start-1 lg:min-w-[400px]"><Us/></div>
             </div>
         </div>
