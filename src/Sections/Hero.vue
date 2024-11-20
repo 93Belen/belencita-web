@@ -69,7 +69,7 @@ onMounted(() => {
 
     <!-- Instagram -->
     <div class="row-start-9 md:row-start-5 md:col-start-1 md:col-span-1 row-span-2 col-start-1 col-span-2 flex justify-center items-center">
-      <Instagram/>
+      <a target="_blank" href="https://www.instagram.com/evil_belencita/"><Instagram/></a>
     </div>
   </div>
 </template>
