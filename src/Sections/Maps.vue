@@ -73,14 +73,14 @@ const changeCountry = (string) => {
                 Almeria is the humble crossroads between Africa and Europe. I miss the narrow streets, 
                 the <span class="italic">jaleo</span> in the bars, its moorish charm, and the warm evenings by the mediterranean sea.</p>
             </div>
-            <div v-if="country === 'uk'" class="p-2 z-[99]">
+            <div v-if="country === 'uk'" class="pt-2 z-[99] col-start-1 col-span-3 row-start-1 row-span-3">
                 <h3 class="font-bold ">London changed <span class="italic">everything</span>.</h3>
                 <p class="">
                     I didn’t speak English when I arrived, but I got a job cleaning tables and built a career in retail.
                     Here, I made friends from all over the world, met my husband, and completely changed my life.
                 </p>
             </div>
-            <div v-if="country === 'us'" class="p-2 z-[99]">
+            <div v-if="country === 'us'" class="pt-2 z-[99] col-start-1 col-span-3 row-start-1 row-span-3">
                 <h3 class="font-bold">Now I live in Kansas City...</h3>
                 <p class="">
                     And after many cultural shocks, I’ve come to call it home. Here, I’ve been given opportunities I never dreamed of.
