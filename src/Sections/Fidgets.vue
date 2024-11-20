@@ -34,19 +34,27 @@
         <!-- Desktop -->
        <div class="hidden h-full md:grid grid-cols-3 grid-rows-4">
             <div class="mockup-window bg-yellow border">
-                <div class="bg-white flex justify-center h-full px-4 py-16">Hello!</div>
+                <div class="bg-[#FFFFF7] flex justify-center h-full px-4 py-16">
+
+                </div>
             </div>
             <div class="mockup-window bg-orange row-span-2 border">
-                <div class="bg-white flex justify-center h-full px-4 py-16">Hello!</div>
+                <div class="bg-[#FFFAF6] flex justify-center h-full px-4 py-16">
+
+                </div>
             </div>
             <div class="mockup-window bg-pink row-span-4 border">
-                <div class="bg-white flex justify-center h-full px-4 py-16">Hello!</div>
+                <div class="bg-[#F4E5F1] flex justify-center h-full px-4 py-16">
+
+                </div>
             </div>
             <div class="mockup-window bg-purple col-start-1 row-span-3 border">
-                <div class="bg-white flex justify-center h-full px-4 py-16">Hello!</div>
+                <div class="bg-[#ECE6F6] flex justify-center h-full px-4 py-16">
+
+                </div>
             </div>
             <div class="mockup-window bg-blue row-span-2 border">
-                <div class="bg-white flex justify-center h-full px-4 py-16">Hello!</div>
+                <div class="bg-[#EAF0F9] flex justify-center h-full px-4 py-16"></div>
             </div>
        </div>
     </div>
