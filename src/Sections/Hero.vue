@@ -44,7 +44,7 @@ onMounted(() => {
       <Sun/>
     </div>
     <!-- image -->
-     <div :style="{ position: 'absolute', top: secondElementY + 'px' }" class="z-[99] overflow-x-hidden max-w-screen translate-y-[-77%] left-[20vw] md:left-[60vw]">
+     <div :style="{ position: 'absolute', top: secondElementY + 'px' }" class="z-[79] overflow-x-hidden max-w-screen translate-y-[-77%] left-[20vw] md:left-[60vw]">
       <img class="min-w-[200px] min-h-[250px] max-w-[70vw] max-h-[100vh] overflow-x-hidden lg:max-w-[575px] lg:max-h-[821px]" src="/mehq.png" alt="">
     </div>
     <!-- Spinner -->
