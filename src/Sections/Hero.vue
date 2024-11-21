@@ -45,7 +45,7 @@ onMounted(() => {
       <img class="min-w-[200px] min-h-[250px] max-w-[70vw] max-h-[100vh] overflow-x-hidden lg:max-w-[575px] lg:max-h-[821px]" src="/mehq.png" alt="">
     </div>
     <!-- Spinner -->
-    <div class="md:col-start-1 col-start-3 w-fit h-fit row-start-3 row-span-3 col-span-3 md:col-span-1 md:row-span-1 md:row-start-1 justify-self-center animate-spin-slow">
+    <div class="md:col-start-1 col-start-2 w-fit h-fit row-start-3 row-span-3 col-span-3 md:col-span-1 md:row-span-1 md:row-start-1 justify-self-end md:justify-self-center animate-spin-slow">
       <img class="w-[150px] h-[150px] p-5" src="/spinner.png" alt="">
     </div>
     <!-- Graphics -->
