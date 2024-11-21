@@ -52,7 +52,7 @@ onMounted(() => {
       <img class="w-[150px] h-[150px] p-5" src="/spinner.png" alt="">
     </div>
     <!-- Graphics -->
-    <div class="row-start-6 col-start-1 col-span-2 z-[99] flex justify-center  md:col-start-3 md:row-start-2 md:col-span-1">
+    <div class="row-start-6 relative z-[999] col-start-1 col-span-2 row-span-2 z-[99] flex justify-center  md:col-start-3 md:row-start-2 md:col-span-1">
       <YellowGraphic/>
     </div>
     <div id='blue-graphic' class="row-start-6 col-start-4 z-[99] col-span-2 row-span-2 flex justify-center items-center md:col-start-3 md:row-start-3">
