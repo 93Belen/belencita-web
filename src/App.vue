@@ -12,12 +12,12 @@ import Universe from './Sections/Universe.vue'
 
 <template>
 <div id="container" class="m-0 p-0 bg-darkpink overflow-x-hidden snap-start scroll-smooth">
-  <header class="relative z-[99] backdrop-blur-sm bg-gradient-to-b from-darkpink via-transparent via-60% hidden md:flex w-full justify-end h-[10vh] font-body font-black text-md">
+  <header class="absolute md:relative pt-6 md:pt-0 z-[99] md:backdrop-blur-sm bg-gradient-to-b from-darkpink via-transparent via-60% md:flex w-full justify-end h-[50px] md:h-[10vh] font-body font-black text-md">
   <nav class="my-auto">
-    <ul class="flex w-[80vw] xl:w-[50vw] justify-around">
-      <li class="cursor-pointer bg-rainbow text-transparent bg-clip-text w-fit hover:animate-backgroundmove transition-all duration-1000 ease-in-out"><a href="#mememe" class="flex items-center gap-2"><Star/>me me me</a></li>
-      <li class="cursor-pointer bg-rainbow text-transparent bg-clip-text w-fit hover:animate-backgroundmove transition-all duration-1000 ease-in-out"><a href="#fidgets" class="flex items-center gap-2"><Heart/>fidgets</a></li>
-      <li class="cursor-pointer bg-rainbow text-transparent bg-clip-text w-fit hover:animate-backgroundmove transition-all duration-1000 ease-in-out"><a href="#universe" class="flex items-center gap-2"><Flower/>the universe</a></li>
+    <ul class="flex justify-self-end flex-col md:flex-row gap-12 md:gap-0 w-[70px] md:w-[80vw] xl:w-[50vw] justify-around">
+      <li class="cursor-pointer bg-rainbow text-transparent bg-clip-text w-fit hover:animate-backgroundmove transition-all duration-1000 ease-in-out"><a href="#mememe" class="flex items-center gap-2"><Star/><p class="hidden md:block">me me me</p></a></li>
+      <li class="cursor-pointer bg-rainbow text-transparent bg-clip-text w-fit hover:animate-backgroundmove transition-all duration-1000 ease-in-out"><a href="#fidgets" class="flex items-center gap-2"><Heart/><p class="hidden md:block">fidgets</p></a></li>
+      <li class="cursor-pointer bg-rainbow text-transparent bg-clip-text w-fit hover:animate-backgroundmove transition-all duration-1000 ease-in-out"><a href="#universe" class="flex items-center gap-2"><Flower/><p class="hidden md:block">the universe</p></a></li>
     </ul>
   </nav>
 </header>
@@ -38,7 +38,7 @@ import Universe from './Sections/Universe.vue'
 
 <style scoped>
 li{
-   -webkit-text-stroke: 1.5px black;
+   -webkit-text-stroke: 1.45px black;
 }
 #container {
   background-image: url('/sunset2.png');
