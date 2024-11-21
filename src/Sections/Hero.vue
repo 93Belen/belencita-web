@@ -7,7 +7,7 @@ import BlueGraphic from '../components/BlueGraphic.vue'
 import GreenGraphic from '../components/GreenGraphic.vue'
 import PinkGraphic from '../components/PinkGraphic.vue'
 import Instagram from '../components/Instagram.vue'
-import {onMounted, ref } from 'vue'
+import {onMounted, ref, watch } from 'vue'
 
 
 
@@ -25,6 +25,10 @@ const calculatePosition = () => {
 
 onMounted(() => {
   calculatePosition(); // Calculate position when the component is mounted
+});
+
+window.addEventListener('resize', () => {
+  calculatePosition();
 });
 
 
