@@ -7,16 +7,17 @@ import Flower from './components/Flower.vue'
 import Marquee from './Sections/Marquee.vue'
 import Maps from './Sections/Maps.vue'
 import Fidgets from './Sections/Fidgets.vue'
+import Universe from './Sections/Universe.vue'
 </script>
 
 <template>
-<div id="container" class="m-0 p-0 bg-darkpink overflow-x-hidden">
+<div id="container" class="m-0 p-0 bg-darkpink overflow-x-hidden snap-start scroll-smooth">
   <header class="backdrop-blur-sm bg-gradient-to-b from-darkpink/50 via-transparent via-60% hidden md:flex w-full justify-end h-[10vh] font-body font-black text-md">
   <nav class="my-auto">
-    <ul class="flex w-[80vw] max-w-[700px] justify-around">
-      <li class="bg-rainbow text-transparent bg-clip-text w-fit flex items-center gap-2"><Star/>me me me</li>
-      <li class="bg-rainbow text-transparent bg-clip-text w-fit flex items-center gap-2"><Heart/>fidgets</li>
-      <li class="bg-rainbow text-transparent bg-clip-text w-fit flex items-center gap-2"><Flower/>the universe</li>
+    <ul class="flex w-[80vw] xl:w-[50vw] justify-around">
+      <li class="cursor-pointer bg-rainbow text-transparent bg-clip-text w-fit hover:animate-backgroundmove transition-all duration-1000 ease-in-out"><a href="#maps" class="flex items-center gap-2"><Star/>me me me</a></li>
+      <li class="cursor-pointer bg-rainbow text-transparent bg-clip-text w-fit hover:animate-backgroundmove transition-all duration-1000 ease-in-out"><a href="#mememe" class="flex items-center gap-2"><Heart/>fidgets</a></li>
+      <li class="cursor-pointer bg-rainbow text-transparent bg-clip-text w-fit hover:animate-backgroundmove transition-all duration-1000 ease-in-out"><a href="#universe" class="flex items-center gap-2"><Flower/>the universe</a></li>
     </ul>
   </nav>
 </header>
@@ -24,11 +25,13 @@ import Fidgets from './Sections/Fidgets.vue'
 <!-- Hero Section -->
  <Hero/>
 <!-- Carousel Section -->
-  <Marquee/>
+  <Marquee id="mememe"/>
 <!-- Maps Section -->
   <Maps/>
 <!-- Fidgets Section -->
-  <Fidgets/>
+  <Fidgets id="fidgets"/>
+<!-- Universe -->
+<Universe id="universe"/>
 </div>
 </div>
 </template>

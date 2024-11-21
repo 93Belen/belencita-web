@@ -48,8 +48,7 @@ export default {
         'spin-slow': 'spin 5s linear infinite',
         'marquee': 'marquee 50s linear infinite',
         'marquee2': 'marquee2 50s linear infinite',
-        'wavy': 'wavy 5s linear infinite',
-        'wavy-reverse': 'wavyreverse 5s linear infinite'
+        'backgroundmove': 'backgroundmove 0.5s linear infinite'
       },
       keyframes: {
         marquee: {
@@ -60,13 +59,13 @@ export default {
           '0%': { transform: 'translateX(100%)' },
           '100%': { transform: 'translateX(0%)' },
         },
-        wavy: {
-          '0%': { transform: 'translateY(100px)' },
-          '100%': { transform: 'translateY(-100px)' },
-        },
-        wavyreverse: {
-          '0%': { transform: 'translateY(-100px)' },
-          '100%': { transform: 'translateY(100px)' },
+        backgroundmove: {
+          '0%': { backgroundImage: 'linear-gradient(90deg, #B9FBC0 #FAF8CB, #FDE4CE, #FFCFD2, #F1C0E8, #CEBAF0, #A4C4F3, #90DBF4, #97F5E1)' },
+          '20%': { backgroundImage: 'linear-gradient(90deg, #97F5E1, #B9FBC0, #FAF8CB, #FDE4CE, #FFCFD2, #F1C0E8, #CEBAF0, #A4C4F3, #90DBF4)' },
+          '40%': { backgroundImage: 'linear-gradient(90deg, #90DBF4, #97F5E1, #B9FBC0, #FAF8CB, #FDE4CE, #FFCFD2, #F1C0E8, #CEBAF0, #A4C4F3)' },
+          '60%': { backgroundImage: 'linear-gradient(90deg, #A4C4F3, #90DBF4, #97F5E1, #B9FBC0, #FAF8CB, #FDE4CE, #FFCFD2, #F1C0E8, #CEBAF0)' },
+          '80%': { backgroundImage: 'linear-gradient(90deg, #CEBAF0, #A4C4F3, #90DBF4, #97F5E1, #B9FBC0 #FAF8CB, #FDE4CE, #FFCFD2, #F1C0E8)' },
+          '100%': { backgroundImage: 'linear-gradient(90deg, #F1C0E8, #CEBAF0, #A4C4F3, #90DBF4, #97F5E1, #B9FBC0, #FAF8CB, #FDE4CE, #FFCFD2)' },
         }
       },
       // spacing: {
