@@ -40,9 +40,6 @@ onMounted(() => {
       <TheBest/>
       <h2 class="text-yellow ml-[10px] md:ml-0 md:text-darkpink col-span-4 font-subtitle text-xs md:text-md justify-self-end 2xl:justify-self-start z-[99]">Just a Wicked Woke Witch</h2>
     </div>
-    <div class="col-start-5 row-start-1 p-2 pt-5 md:hidden w-[90%]">
-      <Sun/>
-    </div>
     <!-- image -->
      <div :style="{ position: 'absolute', top: secondElementY + 'px' }" class="z-[79] overflow-x-hidden max-w-screen translate-y-[-77%] md:translate-y-[-86%]  left-[20vw] md:left-[60vw]">
       <img class="min-w-[200px] min-h-[250px] max-w-[70vw] max-h-[100vh] overflow-x-hidden lg:max-w-[575px] lg:max-h-[821px]" src="/mehq.png" alt="">
