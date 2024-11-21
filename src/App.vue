@@ -15,8 +15,8 @@ import Universe from './Sections/Universe.vue'
   <header class="backdrop-blur-sm bg-gradient-to-b from-darkpink/50 via-transparent via-60% hidden md:flex w-full justify-end h-[10vh] font-body font-black text-md">
   <nav class="my-auto">
     <ul class="flex w-[80vw] xl:w-[50vw] justify-around">
-      <li class="cursor-pointer bg-rainbow text-transparent bg-clip-text w-fit hover:animate-backgroundmove transition-all duration-1000 ease-in-out"><a href="#maps" class="flex items-center gap-2"><Star/>me me me</a></li>
-      <li class="cursor-pointer bg-rainbow text-transparent bg-clip-text w-fit hover:animate-backgroundmove transition-all duration-1000 ease-in-out"><a href="#mememe" class="flex items-center gap-2"><Heart/>fidgets</a></li>
+      <li class="cursor-pointer bg-rainbow text-transparent bg-clip-text w-fit hover:animate-backgroundmove transition-all duration-1000 ease-in-out"><a href="#mememe" class="flex items-center gap-2"><Star/>me me me</a></li>
+      <li class="cursor-pointer bg-rainbow text-transparent bg-clip-text w-fit hover:animate-backgroundmove transition-all duration-1000 ease-in-out"><a href="#fidgets" class="flex items-center gap-2"><Heart/>fidgets</a></li>
       <li class="cursor-pointer bg-rainbow text-transparent bg-clip-text w-fit hover:animate-backgroundmove transition-all duration-1000 ease-in-out"><a href="#universe" class="flex items-center gap-2"><Flower/>the universe</a></li>
     </ul>
   </nav>
