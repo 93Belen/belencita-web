@@ -32,7 +32,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="h-[99vh] overflow-hidden md:h-[90vh] grid grid-cols-5 grid-rows-10 md:grid-rows-5">
+    <div class="h-[99vh] md:h-[90vh] grid grid-cols-5 grid-rows-10 md:grid-rows-5 relative overflow-hidden z-[50]">
     <div class="px-5 row-start-1 sm:col-start-1 col-start-1 md:px-20 col-span-4 sm:col-span-3 md:row-start-3 md:col-start-1 self-end pb-1">
       <Belencita/>
     </div>
@@ -44,7 +44,7 @@ onMounted(() => {
       <Sun/>
     </div>
     <!-- image -->
-     <div :style="{ position: 'absolute', top: secondElementY + 'px' }" class="z-[79] overflow-x-hidden max-w-screen translate-y-[-77%] left-[20vw] md:left-[60vw]">
+     <div :style="{ position: 'absolute', top: secondElementY + 'px' }" class="z-[79] overflow-x-hidden max-w-screen translate-y-[-77%] md:translate-y-[-87%]  left-[20vw] md:left-[60vw]">
       <img class="min-w-[200px] min-h-[250px] max-w-[70vw] max-h-[100vh] overflow-x-hidden lg:max-w-[575px] lg:max-h-[821px]" src="/mehq.png" alt="">
     </div>
     <!-- Spinner -->
