@@ -12,7 +12,7 @@ import Universe from './Sections/Universe.vue'
 
 <template>
 <div id="container" class="m-0 p-0 bg-darkpink overflow-x-hidden snap-start w-screen scroll-smooth">
-  <header class="absolute md:relative pt-6 md:pt-0 z-[99] md:backdrop-blur-sm bg-gradient-to-b from-darkpink via-transparent via-60% md:flex w-full justify-end h-[50px] md:h-[10vh] font-body font-black text-md">
+  <header class="absolute md:relative pt-6 md:pt-0 z-[99] md:backdrop-blur-sm bg-gradient-to-b from-darkpink via-transparent via-60% hidden md:flex w-full justify-end h-[50px] md:h-[10vh] font-body font-black text-md">
   <nav class="my-auto flex justify-end w-full">
     <ul class="flex justify-self-end flex-col md:flex-row gap-10 md:gap-0 w-[65px] md:w-[80vw] xl:w-[50vw] justify-around">
       <li class="cursor-pointer bg-rainbow text-transparent bg-clip-text w-fit hover:animate-backgroundmove transition-all duration-1000 ease-in-out"><a href="#mememe" class="flex items-center gap-2"><Star/><p class="hidden md:block">me me me</p></a></li>
