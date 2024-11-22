@@ -12,7 +12,7 @@ import { ref } from 'vue'
 let open = ref(false)
 
 const onClick = () => {
-  if(window.innerWidth < 600)
+  if(window.innerWidth < 767)
   open.value = !open.value
 }
 
@@ -24,7 +24,7 @@ const onClick = () => {
 
 <template>
 <div id="container" class="m-0 p-0 bg-darkpink overflow-x-hidden snap-start w-screen scroll-smooth">
-  <header @click="onClick" :class="open ? 'translate-x-[10px]' : 'translate-x-[215px]'" class="fixed md:static pt-6 md:pt-0 z-[999] md:backdrop-blur-sm bg-gradient-to-b from-darkpink via-transparent via-60% md:flex w-full justify-end h-[50px] md:h-[10vh] font-body font-black text-md transition-all duration-[1s] ease-out">
+  <header @click="onClick" :class="open ? 'translate-x-[10px]' : 'translate-x-[193px]'" class="fixed md:static pt-6 md:pt-0 z-[999] md:backdrop-blur-sm bg-gradient-to-b from-darkpink via-transparent via-60% md:flex w-full justify-end h-[50px] md:h-[10vh] font-body font-black text-md transition-all duration-[1s] ease-out">
   <nav class="my-auto flex justify-end w-full">
     <ul class="flex justify-self-end flex-col md:flex-row gap-5 p-3 md:p-0 border-2 max-w-screen md:border-0 border-black rounded-lg md:gap-0 w-fit bg-purple pr-6 md:pr-0 relative md:flex md:bg-transparent md:w-[80vw] xl:w-[50vw] justify-around">
       <li class="cursor-pointer bg-rainbow text-transparent bg-clip-text w-fit hover:animate-backgroundmove transition-all duration-1000 ease-in-out"><p class="flex items-center gap-2"><Star/><a href="#mememe" class="">me me me</a></p></li>
