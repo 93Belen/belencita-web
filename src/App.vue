@@ -8,16 +8,28 @@ import Marquee from './Sections/Marquee.vue'
 import Maps from './Sections/Maps.vue'
 import Fidgets from './Sections/Fidgets.vue'
 import Universe from './Sections/Universe.vue'
+import { ref } from 'vue'
+let open = ref(false)
+
+const onClick = () => {
+  if(window.innerWidth < 600)
+  open.value = !open.value
+}
+
+
 </script>
+
+
+
 
 <template>
 <div id="container" class="m-0 p-0 bg-darkpink overflow-x-hidden snap-start w-screen scroll-smooth">
-  <header class="absolute md:relative pt-6 md:pt-0 z-[99] md:backdrop-blur-sm bg-gradient-to-b from-darkpink via-transparent via-60% hidden md:flex w-full justify-end h-[50px] md:h-[10vh] font-body font-black text-md">
+  <header @click="onClick" :class="open ? 'left-[10px]' : 'left-[215px]'" class="fixed md:static pt-6 md:pt-0 z-[99] md:backdrop-blur-sm bg-gradient-to-b from-darkpink via-transparent via-60% md:flex w-full justify-end h-[50px] md:h-[10vh] font-body font-black text-md">
   <nav class="my-auto flex justify-end w-full">
-    <ul class="flex justify-self-end flex-col md:flex-row gap-10 md:gap-0 w-[65px] md:w-[80vw] xl:w-[50vw] justify-around">
-      <li class="cursor-pointer bg-rainbow text-transparent bg-clip-text w-fit hover:animate-backgroundmove transition-all duration-1000 ease-in-out"><a href="#mememe" class="flex items-center gap-2"><Star/><p class="hidden md:block">me me me</p></a></li>
-      <li class="cursor-pointer bg-rainbow text-transparent bg-clip-text w-fit hover:animate-backgroundmove transition-all duration-1000 ease-in-out"><a href="#fidgets" class="flex items-center gap-2"><Heart/><p class="hidden md:block">fidgets</p></a></li>
-      <li class="cursor-pointer bg-rainbow text-transparent bg-clip-text w-fit hover:animate-backgroundmove transition-all duration-1000 ease-in-out"><a href="#universe" class="flex items-center gap-2"><Flower/><p class="hidden md:block">the universe</p></a></li>
+    <ul class="flex justify-self-end flex-col md:flex-row gap-5 p-3 md:p-0 border-2 max-w-screen md:border-0 border-black rounded-lg md:gap-0 w-fit bg-purple pr-12 md:pr-0 relative md:flex md:bg-transparent md:w-[80vw] xl:w-[50vw] justify-around">
+      <li class="cursor-pointer bg-rainbow text-transparent bg-clip-text w-fit hover:animate-backgroundmove transition-all duration-1000 ease-in-out"><p class="flex items-center gap-2"><Star/><a href="#mememe" class="">me me me</a></p></li>
+      <li class="cursor-pointer bg-rainbow text-transparent bg-clip-text w-fit hover:animate-backgroundmove transition-all duration-1000 ease-in-out"><p class="flex items-center gap-2"><Heart/><a href="#fidgets" class="">fidgets</a></p></li>
+      <li class="cursor-pointer bg-rainbow text-transparent bg-clip-text w-fit hover:animate-backgroundmove transition-all duration-1000 ease-in-out"><p class="flex items-center gap-2"><Flower/><a href="#universe" class="">the universe</a></p></li>
     </ul>
   </nav>
 </header>
