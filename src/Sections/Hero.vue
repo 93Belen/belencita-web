@@ -28,7 +28,9 @@ onMounted(() => {
 });
 
 window.addEventListener('resize', () => {
+  if(window.innerWidth > 700){
   calculatePosition();
+  }
 });
 
 
