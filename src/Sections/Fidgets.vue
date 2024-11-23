@@ -1,5 +1,5 @@
 <script setup>
-
+import BallChain from '../components/Fidgets/BallChain.vue'
 </script>
 
 <template>
@@ -40,7 +40,7 @@
             </div>
             <div class="mockup-window bg-orange row-span-2 border">
                 <div class="bg-[#FFFAF6] flex justify-center h-full px-4 py-16">
-
+                    <BallChain/>
                 </div>
             </div>
             <div class="mockup-window bg-pink row-span-4 border">

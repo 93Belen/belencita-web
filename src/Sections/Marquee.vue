@@ -14,7 +14,7 @@ import Pinia from '../components/Tech/Pinia.vue'
 </script>
 
 <template>
-    <div class="h-[20vh] min-h-[170px] bg-white border-y-2 border-black">
+    <div class="h-[20vh] h-[175px] bg-white border-y-2 border-black">
         <div class="relative flex overflow-x-hidden">
             <div class="py-12 animate-marquee whitespace-nowrap flex gap-16">
                 <React/>
