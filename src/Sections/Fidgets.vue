@@ -1,5 +1,8 @@
 <script setup>
 import BallChain from '../components/Fidgets/BallChain.vue'
+import { onMounted, ref } from 'vue'
+
+
 </script>
 
 <template>
@@ -17,8 +20,7 @@ import BallChain from '../components/Fidgets/BallChain.vue'
             </div>
 
             <input type="radio" name="my_tabs_2" role="tab" class="tab bg-orange [--tab-bg:#FDE3CE] [--tab-border-color:transparent]" aria-label="" />
-            <div role="tabpanel" class="tab-content bg-orange p-6 h-[70vh]">
-                Tab content 3
+            <div role="tabpanel" class="tab-content bg-orange p-6 h-[70vh] w-screen">
             </div>
 
             <input type="radio" name="my_tabs_2" role="tab" class="tab bg-pink [--tab-bg:#F1C0E8] [--tab-border-color:transparent]" aria-label="" />
@@ -39,7 +41,7 @@ import BallChain from '../components/Fidgets/BallChain.vue'
                 </div>
             </div>
             <div class="mockup-window bg-orange row-span-2 border">
-                <div class="bg-[#FFFAF6] flex justify-center h-full px-4 py-16">
+                <div class="bg-[#FFFAF6] flex justify-center h-full">
                     <BallChain/>
                 </div>
             </div>
