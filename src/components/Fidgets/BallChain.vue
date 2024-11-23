@@ -13,19 +13,19 @@ let bubble = []
 let colors = [
     '#8EECF5',  // lightblue
     '#CEBAF0',  // purple
-    '#FDE3CE',  // orange
     '#F1C0E8',  // pink
-    '#FCF6BD',  // yellow
     '#D0F4DD',  // green
     '#A4C4F3',  // blue
-    '#FCF6BD',  // yellow
     '#8EECF5',  // lightblue
     '#F1C0E8',  // pink
-    '#FDE3CE',  // orange
     '#D0F4DD',  // green
-    '#FCF6BD',  // yellow
-    '#FDE3CE',  // orange
+    '#CEBAF0',  // purple
     '#A4C4F3',  // blue
+    '#F1C0E8',  // pink
+    '#D0F4DD',  // green
+    '#A4C4F3',  // blue
+    '#CEBAF0',  // purple
+    '#8EECF5',  // lightblue
 ];
 
 
@@ -58,7 +58,7 @@ onMounted(() => {
     divWidth = fidgetWindow.clientWidth
     divHeight = fidgetWindow.clientHeight
 
-    canvas.height = window.innerHeight
+    canvas.height = window.innerHeight / 0.7
     canvas.width = window.innerWidth
 
 
@@ -90,7 +90,7 @@ onMounted(() => {
     Composite.add(engine.world, [chain1, chain2, chain3, mouseConstraint])
     let options = {
         stiffness: 0.1,
-        damping: 0.5,
+        damping: 0.7,
         length: 40
     }
     Composites.chain(chain1, 0, 0, 0, 0, options)
@@ -144,8 +144,8 @@ const animation = () => {
 
 
 <template>
-    <div id='fidget-balls' class="w-screen h-full m-auto">
-        <canvas width="100%" height="100%" id="canvas" class="">
+    <div id='fidget-balls' class="w-screen h-full m-auto bg-transparent">
+        <canvas width="100%" height="100%" id="canvas" class="bg-transparent">
 
         </canvas>
     </div>

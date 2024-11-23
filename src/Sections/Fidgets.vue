@@ -3,13 +3,13 @@ import BallChain from '../components/Fidgets/BallChain.vue'
 import { onMounted, ref } from 'vue'
 let mobile = ref(true)
 onMounted(() => {
-    if(window.innerWidth > 900){
+    if(window.innerWidth > 769){
         mobile.value = false
     }
 })
 
 window.addEventListener('resize', () => {
-     if(window.innerWidth > 900){
+     if(window.innerWidth > 769){
         mobile.value = false
     }
     else {
@@ -29,8 +29,8 @@ window.addEventListener('resize', () => {
                 </div>
             </div>
             <input v-if="mobile" type="radio" name="my_tabs_2" role="tab" class="tab bg-yellow [--tab-bg:#FAF8CB] [--tab-border-color:transparent]" aria-label="" />
-            <div :role="mobile? 'tabpanel' : ''" :class="mobile? 'tab-content bg-yellow p-6 h-[70vh] w-full h-full':'mockup-window bg-yellow border row-span-2 w-full h-full'">
-                <div class="bg-[#FFFAF6] flex justify-center w-full h-full">
+            <div :role="mobile? 'tabpanel' : ''" :class="mobile? 'tab-content bg-yellow md:p-6 h-[70vh] w-full h-full':'mockup-window bg-yellow border row-span-2 w-full h-full'">
+                <div class="md:bg-[#FFFAF6] bg-[#FAF8CB] rounded-lg flex justify-center w-full h-full">
                     <BallChain/>
                 </div>
             </div>
