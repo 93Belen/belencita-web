@@ -56,8 +56,8 @@ onMounted(() => {
     const divWidth = fidgetWindow.clientWidth
     const divHeight = fidgetWindow.clientHeight
 
-    canvas.height = divHeight
-    canvas.width = divWidth
+    canvas.height = 400
+    canvas.width = 400
     engine = Engine.create()
 
     mouse = Mouse.create(fidgetWindow)
@@ -70,7 +70,7 @@ onMounted(() => {
        if(i === 0 || i === 5 || i === 10){
            fixed = true
            y = 50
-           x = divWidth / 5 + i * divWidth / 20
+           x = 200
        }
 
        bodies[i] = Bodies.circle(x, y, radius, {isStatic: fixed})
@@ -141,7 +141,7 @@ const animation = () => {
 
 <template>
     <div id='fidget-balls' class="w-full h-full m-auto">
-        <canvas id="canvas" class="w-full h-full">
+        <canvas id="canvas" class="">
 
         </canvas>
     </div>
