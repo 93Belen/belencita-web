@@ -1,6 +1,6 @@
 <script setup>
 import Matter from 'matter-js'
-import { onMounted, ref } from 'vue';
+import { onMounted, ref, nextTick } from 'vue';
 const { Engine, Body, Bodies, Composite, Constraint, Composites, Mouse, MouseConstraint } = Matter;
 let engine, render, runner;
 let canvas, ctx;
@@ -53,13 +53,16 @@ onMounted(() => {
     canvas = document.getElementById('canvas')
     ctx = canvas.getContext('2d')
     const fidgetWindow = document.getElementById('fidget-balls')
-    const divWidth = fidgetWindow.clientWidth
-    const divHeight = fidgetWindow.clientHeight
+    let divHeight, divWidth;
 
-    canvas.height = 400
-    canvas.width = 400
+    divWidth = fidgetWindow.clientWidth
+    divHeight = fidgetWindow.clientHeight
+
+    canvas.height = window.innerHeight
+    canvas.width = window.innerWidth
+
+
     engine = Engine.create()
-
     mouse = Mouse.create(fidgetWindow)
     mouseConstraint = MouseConstraint.create(engine, mouse)
    
@@ -70,7 +73,8 @@ onMounted(() => {
        if(i === 0 || i === 5 || i === 10){
            fixed = true
            y = 50
-           x = 200
+           console.log(fidgetWindow.clientWidth)
+           x = canvas.width / 2
        }
 
        bodies[i] = Bodies.circle(x, y, radius, {isStatic: fixed})
@@ -140,8 +144,8 @@ const animation = () => {
 
 
 <template>
-    <div id='fidget-balls' class="w-full h-full m-auto">
-        <canvas id="canvas" class="">
+    <div id='fidget-balls' class="w-screen h-full m-auto">
+        <canvas width="100%" height="100%" id="canvas" class="">
 
         </canvas>
     </div>

@@ -29,7 +29,7 @@ window.addEventListener('resize', () => {
                 </div>
             </div>
             <input v-if="mobile" type="radio" name="my_tabs_2" role="tab" class="tab bg-yellow [--tab-bg:#FAF8CB] [--tab-border-color:transparent]" aria-label="" />
-            <div :role="mobile? 'tabpanel' : ''" :class="mobile? 'tab-content bg-yellow p-6 h-[70vh]':'mockup-window bg-yellow border row-span-2'">
+            <div :role="mobile? 'tabpanel' : ''" :class="mobile? 'tab-content bg-yellow p-6 h-[70vh] w-full h-full':'mockup-window bg-yellow border row-span-2 w-full h-full'">
                 <div class="bg-[#FFFAF6] flex justify-center w-full h-full">
                     <BallChain/>
                 </div>
