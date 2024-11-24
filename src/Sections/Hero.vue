@@ -24,6 +24,9 @@ const secondElementY = ref(0); // Y position for the second element
 
 const calculatePosition = () => {
   firstElement.value = document.getElementById('yellow-area')
+  const img = document.getElementById('img-belen')
+  const position = img.getBoundingClientRect()
+  console.log(position.top)
   if (firstElement.value) {
     // Get the bounding box of the first element
     const rect = firstElement.value.getBoundingClientRect();
@@ -56,8 +59,8 @@ window.addEventListener('resize', () => {
       <h2 class="text-yellow ml-[10px] md:ml-0 md:text-darkpink col-span-4 font-subtitle text-xs md:text-md justify-self-end 2xl:justify-self-start z-[99]">Just a Wicked Woke Witch</h2>
     </div>
     <!-- image -->
-     <div :style="{ position: 'absolute', top: secondElementY + 'px' }" class="z-[79] overflow-x-hidden max-w-screen translate-y-[-77%] md:translate-y-[-86%] left-[20vw] md:left-[60vw]">
-      <img class="min-w-[200px] min-h-[250px] max-w-[70vw] max-h-[100vh] overflow-x-hidden lg:max-w-[575px] lg:max-h-[821px]" src="/mehq.png" alt="">
+     <div :style="{ position: 'absolute', top: secondElementY + 'px' }" class="z-[79] overflow-x-hidden max-w-screen translate-y-[-70%] md:translate-y-[-87%] left-[20vw] md:left-[60vw]">
+      <img id="img-belen" class="min-w-[200px] min-h-[250px] max-w-[70vw] max-h-[55vh] overflow-x-hidden lg:max-w-[575px] lg:max-h-[500px]" src="/mehqsmall.png" alt="">
     </div>
     <!-- Spinner -->
     <div class="md:col-start-1 col-start-2 w-fit h-fit row-start-3 row-span-3 col-span-3 md:col-span-1 md:row-span-1 md:row-start-1 justify-self-end md:justify-self-center animate-spin-slow">
