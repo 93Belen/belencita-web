@@ -74,7 +74,13 @@ onMounted(() => {
            fixed = true
            y = 50
            console.log(fidgetWindow.clientWidth)
+           if(canvas.width > 768){
            x = canvas.width / 6
+           }
+           else {
+           x = canvas.width / 2
+
+           }
        }
 
        bodies[i] = Bodies.circle(x, y, radius, {isStatic: fixed})

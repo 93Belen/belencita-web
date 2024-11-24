@@ -29,7 +29,7 @@ export default {
       'rainbow': 'linear-gradient(90deg, #FAF8CB, #FDE4CE, #FFCFD2, #F1C0E8, #CEBAF0, #A4C4F3, #90DBF4, #97F5E1, #B9FBC0)'
     },
     fontSize: {
-      'xs': '15px',
+      'xs': '14px',
       'sm': '20px',
       'md': '24px',
       'lg': '28px',

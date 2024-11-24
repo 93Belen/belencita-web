@@ -70,7 +70,7 @@ const changeCountry = (string) => {
         <div class="md:hidden p-2 pt-5 md:p-20 h-fit">
             <!-- Slider main container -->
             <swiper-container class="mySwiper h-fit w-[85%] m-auto" effect="cards" grab-cursor="true">
-            <swiper-slide class="flex p-5 items-center backdrop-blur-sm bg-white/50 w-[90%] flex-col h-full rounded-xl border-2 border-black">
+            <swiper-slide class="flex p-3 items-center backdrop-blur-sm bg-white/50 w-[90%] flex-col h-full rounded-xl border-2 border-black">
                 <Spain/>
                 <div class="pt-2">
                     <h3 class="font-bold text-xs">From the southernmost part of Spain.</h3>
@@ -79,7 +79,7 @@ const changeCountry = (string) => {
                     the <span class="italic">jaleo</span> in the bars, the warm evenings...</p>
                 </div>
             </swiper-slide>
-            <swiper-slide class="flex p-5 items-center backdrop-blur-sm bg-white/50 w-[90%] flex-col h-full rounded-xl border-2 border-black">
+            <swiper-slide class="flex p-3 items-center backdrop-blur-sm bg-white/50 w-[90%] flex-col h-full rounded-xl border-2 border-black">
                 <Uk/>
                 <div class="p-2">
                     <h3 class="font-bold text-xs">London changed <span class="italic">everything</span>.</h3>
@@ -89,13 +89,13 @@ const changeCountry = (string) => {
                     </p>
                 </div>
             </swiper-slide>
-            <swiper-slide class="flex p-5 items-center backdrop-blur-sm bg-white/50 w-[90%] flex-col h-full rounded-xl border-2 border-black">
+            <swiper-slide class="flex p-3 items-center backdrop-blur-sm bg-white/50 w-[90%] flex-col h-full rounded-xl border-2 border-black">
                 <Us/>
                 <div class="p-2">
-                    <h3 class="font-bold text-xs">Now I live in Kansas City...</h3>
+                    <h3 class="font-bold text-xs">Now I live in Kansas City.</h3>
                     <p class="text-xs">
-                    And after many cultural shocks, I’ve come to call it home. Here, I’ve been given opportunities I never dreamed of.
-                    But most importantly, I adopted my dog, Troy—the true spark of my life and my best friend in the entire universe.
+                    And after some cultural shocks, I’ve come to call it home. Here, I’ve been given opportunities I never dreamed of.
+                    But most importantly, I adopted my dog Troy—the true spark of my life and my best friend in the entire universe.
                     </p>
                 </div>
             </swiper-slide>
