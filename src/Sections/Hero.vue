@@ -60,7 +60,7 @@ window.addEventListener('resize', () => {
     </div>
     <!-- image -->
      <div :style="{ position: 'absolute', top: secondElementY + 'px' }" class="z-[79] overflow-x-hidden max-w-screen translate-y-[-70%] md:translate-y-[-87%] left-[20vw] md:left-[60vw]">
-      <img id="img-belen" class="min-w-[200px] min-h-[250px] max-w-[70vw] max-h-[50vh] overflow-x-hidden lg:max-w-[575px] lg:max-h-[500px]" src="/mehqsmall.png" alt="">
+      <img id="img-belen" class="min-w-[200px] min-h-[250px] max-w-[70vw] max-h-[45vh] overflow-x-hidden lg:max-w-[575px] lg:max-h-[500px]" src="/mehqsmall.png" alt="">
     </div>
     <!-- Spinner -->
     <div class="md:col-start-1 col-start-2 w-fit h-fit row-start-3 row-span-3 col-span-3 md:col-span-1 md:row-span-1 md:row-start-1 justify-self-end md:justify-self-center animate-spin-slow">
