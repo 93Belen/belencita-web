@@ -65,7 +65,7 @@ const changeCountry = (string) => {
 
 
 <template>
-    <div class="bg-white overflow-hidden h-fit py-10 md:py-0 md:min-h-[75vh] border-b-2 border-black md:grid md:grid-rows-1 md:grid-cols-[40%_60%] text-black">
+    <div class="bg-white overflow-hidden h-fit py-10 md:py-0 md:min-h-[75vh] 2xl:h-[70vh] border-b-2 border-black md:grid md:grid-rows-1 md:grid-cols-[40%_60%] text-black">
         <!-- Mobile Cards Carousel -->
         <div class="md:hidden p-2 pt-5 md:p-20 h-fit">
             <!-- Slider main container -->
@@ -132,7 +132,7 @@ const changeCountry = (string) => {
                 <p :class="country === 'spain' ? 'text-[#69686A]' : 'text-white'" id="spain" class="location-text justify-self-center mb-5 self-end 2xl:self-center 2xl:mt-[150px] 2xl:text-[34px] row-start-1 col-start-1 z-[99] rotate-[-10deg] hover:text-[#69686A] transition-colors duration-500">Almeria</p>
                 <div class="m-auto row-start-1 col-start-1"><Spain/></div>
             </div>
-            <div @click="changeCountry('uk')" class="cursor-pointer row-start-1 2xl:justify-self-center col-start-4 xl:col-start-3 col-span-3 row-span-2 md:w-[270px] justify-self-end lg:self-center rotate-[-5deg] grid grid-col-1 grid-row-1">
+            <div @click="changeCountry('uk')" class="cursor-pointer 2xl:pt-[50px] row-start-1 2xl:justify-self-center col-start-4 xl:col-start-3 col-span-3 row-span-2 md:w-[270px] justify-self-end lg:self-center rotate-[-5deg] grid grid-col-1 grid-row-1">
                 <p :class="country === 'uk' ? 'text-[#69686A]' : 'text-white'" id="uk" class="location-text justify-self-center xl:justify-self-end 2xl:justify-self-end mb-5 self-end ml-2 row-start-1 col-start-1 2xl:text-[34px] z-[99] rotate-[5deg] hover:text-[#69686A] transition-colors duration-500">London</p>
                 <div class="m-auto row-start-1 col-start-1"><Uk/></div>
             </div>

@@ -58,8 +58,8 @@ onMounted(() => {
     divWidth = fidgetWindow.clientWidth
     divHeight = fidgetWindow.clientHeight
 
-    canvas.height = window.innerHeight / 2.5
-    canvas.width = window.innerWidth / 3.1
+    canvas.height = window.innerHeight / 2
+    canvas.width = window.innerWidth / 3
 
 
     engine = Engine.create()
@@ -144,7 +144,7 @@ const animation = () => {
 
 
 <template>
-    <div id='fidget-balls' class="w-full h-full m-auto bg-transparent">
+    <div id='fidget-balls' class="w-full h-full m-auto bg-transparent overflow-hidden">
         <canvas width="100%" height="100%" id="canvas" class="bg-transparent m-auto">
 
         </canvas>
