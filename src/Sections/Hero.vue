@@ -77,7 +77,7 @@ window.addEventListener('resize', () => {
     <!-- Instagram and Spotify -->
     <div class="row-start-9 md:row-start-5 flex justify-around md:justify-center md:gap-5 pl-4 col-span-3 md:gap-5 md:col-start-1 md:col-span-1 row-span-2 col-start-1 flex justify-center items-center">
       <a target="_blank" href="https://www.instagram.com/evil_belencita/"><Instagram/></a>
-      <a target="_blank" href="https://www.instagram.com/evil_belencita/"><Spotify/></a>
+      <a target="_blank" href="https://open.spotify.com/user/31rngjcpxljttukxzph664vdkg6u"><Spotify/></a>
       <a target="_blank" href="https://www.instagram.com/troy_m_kingston/"><TroysInstagram/></a>
     </div>
   </div>
