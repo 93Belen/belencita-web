@@ -58,8 +58,8 @@ onMounted(() => {
     divWidth = fidgetWindow.clientWidth
     divHeight = fidgetWindow.clientHeight
 
-    canvas.height = window.innerHeight / 2
-    canvas.width = window.innerWidth / 3
+    canvas.height = window.innerHeight
+    canvas.width = window.innerWidth
 
 
     engine = Engine.create()
@@ -74,7 +74,7 @@ onMounted(() => {
            fixed = true
            y = 50
            console.log(fidgetWindow.clientWidth)
-           x = canvas.width / 2
+           x = canvas.width / 6
        }
 
        bodies[i] = Bodies.circle(x, y, radius, {isStatic: fixed})
@@ -145,7 +145,7 @@ const animation = () => {
 
 <template>
     <div id='fidget-balls' class="w-full h-full m-auto bg-transparent overflow-hidden">
-        <canvas width="100%" height="100%" id="canvas" class="bg-transparent m-auto">
+        <canvas width="100%" height="100%" id="canvas" class="bg-transparent">
 
         </canvas>
     </div>
