@@ -128,7 +128,7 @@ const changeCountry = (string) => {
         </div>
         <div class="w-full hidden md:grid md:grid-cols-6 md:grid-rows-6 text-white text-md font-medium font-alternates">
             <div id="maps" class="border-l-2 border-black col-start-3 col-span-4 row-start-1 row-span-6"></div>
-            <div @click="changeCountry('spain')" class="cursor-pointer 2xl:self-start row-start-4 col-start-4 col-span-2 row-span-3 md:w-[230px] md:self-center lg:self-center rotate-12 grid grid-col-1 grid-row-1">
+            <div @click="changeCountry('spain')" class="cursor-pointer row-start-4 col-start-4 col-span-2 row-span-3 md:w-[230px] md:self-center lg:self-center rotate-12 grid grid-col-1 grid-row-1">
                 <p :class="country === 'spain' ? 'text-[#69686A]' : 'text-white'" id="spain" class="location-text justify-self-center mb-5 self-end 2xl:self-center 2xl:mt-[150px] 2xl:text-[34px] row-start-1 col-start-1 z-[99] rotate-[-10deg] hover:text-[#69686A] transition-colors duration-500">Almeria</p>
                 <div class="m-auto row-start-1 col-start-1"><Spain/></div>
             </div>
