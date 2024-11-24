@@ -48,7 +48,9 @@ export default {
         'spin-slow': 'spin 5s linear infinite',
         'marquee': 'marquee 50s linear infinite',
         'marquee2': 'marquee2 50s linear infinite',
-        'backgroundmove': 'backgroundmove 0.5s linear infinite'
+        'backgroundmove': 'backgroundmove 0.5s linear infinite',
+        'appear': 'appear 1s linear'
+
       },
       keyframes: {
         marquee: {
@@ -58,6 +60,10 @@ export default {
         marquee2: {
           '0%': { transform: 'translateX(100%)' },
           '100%': { transform: 'translateX(0%)' },
+        },
+        appear: {
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 },
         },
         backgroundmove: {
           '0%': { backgroundImage: 'linear-gradient(90deg, #B9FBC0 #FAF8CB, #FDE4CE, #FFCFD2, #F1C0E8, #CEBAF0, #A4C4F3, #90DBF4, #97F5E1)' },

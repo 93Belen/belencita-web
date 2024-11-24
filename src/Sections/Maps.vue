@@ -104,20 +104,20 @@ const changeCountry = (string) => {
         <!-- Desktop -->
         <div class="hidden md:grid grid-cols-3 grid-rows-3 justify-center items-center pl-20 xl:pl-36 py-12 text-md xl:text-lg">
             <div class="hidden lg:block col-start-1 row-start-1 z-[0] relative right-10"><DarkBlueGraphic/></div>
-             <div v-if="country === 'spain'" class="pt-2 z-[99] col-start-1 col-span-3 row-start-1 row-span-3">
+             <div v-if="country === 'spain'" class="pt-2 z-[99] col-start-1 col-span-3 row-start-1 row-span-3 animate-appear">
                 <h3 class="font-bold">From the southernmost part of Spain.</h3>
                 <p class="">
                     Almeria is the humble crossroads between Africa and Europe, Mediterranean at its core. I miss the narrow streets, 
                     the <span class="italic">jaleo</span> in the bars, the warm evenings...</p>
             </div>
-            <div v-if="country === 'uk'" class="pt-2 z-[99] col-start-1 col-span-3 row-start-1 row-span-3">
+            <div v-if="country === 'uk'" class="pt-2 z-[99] col-start-1 col-span-3 row-start-1 row-span-3 animate-appear">
                 <h3 class="font-bold ">London changed <span class="italic">everything</span>.</h3>
                 <p class="">
                     I didn’t speak English when I arrived, but I got a job cleaning tables and built a career in retail.
                     Here, I made friends from all over the world, met my husband, and changed my life for ever.
                 </p>
             </div>
-            <div v-if="country === 'us'" class="pt-2 z-[99] col-start-1 col-span-3 row-start-1 row-span-3">
+            <div v-if="country === 'us'" class="pt-2 z-[99] col-start-1 col-span-3 row-start-1 row-span-3 animate-appear">
                 <h3 class="font-bold">Now I live in Kansas City...</h3>
                 <p class="">
                     And after many cultural shocks, I’ve come to call it home. Here, I’ve been given opportunities I never dreamed of.
