@@ -24,14 +24,10 @@ const secondElementY = ref(0); // Y position for the second element
 
 const calculatePosition = () => {
   firstElement.value = document.getElementById('yellow-area')
-  const pointInImg = document.getElementById('ref-image')
-  const sizes = pointInImg.getBoundingClientRect()
-  const y = sizes.y
-  const percent = (2/5) * window.innerHeight
   if (firstElement.value) {
     // Get the bounding box of the first element
     const rect = firstElement.value.getBoundingClientRect();
-    secondElementY.value = y - rect.y; // Save the Y position
+    secondElementY.value = rect.y; // Save the Y position
   }
 };
 
@@ -39,9 +35,6 @@ onMounted(() => {
   calculatePosition(); // Calculate position when the component is mounted
 });
 
-watch(firstElement, () => {
-  calculatePosition()
-})
 
 window.addEventListener('resize', () => {
   if(window.innerWidth > 700){
@@ -62,14 +55,10 @@ window.addEventListener('resize', () => {
       <TheBest/>
       <h2 class="text-yellow ml-[10px] md:ml-0 md:text-darkpink col-span-4 font-subtitle text-xs md:text-md justify-self-end 2xl:justify-self-start z-[99]">Just a Wicked Woke Witch</h2>
     </div>
-    <!-- Image SVG -->
-     <div :style="{ position: 'absolute', bottom: secondElementY + 'px' }" class="z-[79] overflow-x-hidden max-w-screen left-[20vw] md:left-[60vw]">
-       <Image/>
-    </div>
     <!-- image -->
-     <!-- <div :style="{ position: 'absolute', top: secondElementY + 'px' }" class="z-[79] overflow-x-hidden max-w-screen translate-y-[-77%] md:translate-y-[-86%] left-[20vw] md:left-[60vw]">
+     <div :style="{ position: 'absolute', top: secondElementY + 'px' }" class="z-[79] overflow-x-hidden max-w-screen translate-y-[-77%] md:translate-y-[-86%] left-[20vw] md:left-[60vw]">
       <img class="min-w-[200px] min-h-[250px] max-w-[70vw] max-h-[100vh] overflow-x-hidden lg:max-w-[575px] lg:max-h-[821px]" src="/mehq.png" alt="">
-    </div> -->
+    </div>
     <!-- Spinner -->
     <div class="md:col-start-1 col-start-2 w-fit h-fit row-start-3 row-span-3 col-span-3 md:col-span-1 md:row-span-1 md:row-start-1 justify-self-end md:justify-self-center animate-spin-slow">
       <img class="w-[150px] h-[150px] p-5" src="/spinner.png" alt="">
