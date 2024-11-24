@@ -7,6 +7,10 @@ import BlueGraphic from '../components/BlueGraphic.vue'
 import GreenGraphic from '../components/GreenGraphic.vue'
 import PinkGraphic from '../components/PinkGraphic.vue'
 import Instagram from '../components/Instagram.vue'
+import Spotify from '../components/Spotify.vue'
+import TroysInstagram from '../components/TroysInstagram.vue'
+
+
 import {onMounted, ref, watch } from 'vue'
 
 
@@ -70,9 +74,11 @@ window.addEventListener('resize', () => {
     <!-- Yellow area -->
     <div id="yellow-area" class="px-5 md:px-20 bg-yellow col-start1 row-start-7 col-span-5 row-span-4 md:row-start-4 col-start-1"></div>
 
-    <!-- Instagram -->
-    <div class="row-start-9 md:row-start-5 md:col-start-1 md:col-span-1 row-span-2 col-start-1 col-span-2 flex justify-center items-center">
+    <!-- Instagram and Spotify -->
+    <div class="row-start-9 md:row-start-5 flex justify-around md:justify-center md:gap-5 pl-4 col-span-3 md:gap-5 md:col-start-1 md:col-span-1 row-span-2 col-start-1 flex justify-center items-center">
       <a target="_blank" href="https://www.instagram.com/evil_belencita/"><Instagram/></a>
+      <a target="_blank" href="https://www.instagram.com/evil_belencita/"><Spotify/></a>
+      <a target="_blank" href="https://www.instagram.com/troy_m_kingston/"><TroysInstagram/></a>
     </div>
   </div>
 </template>
