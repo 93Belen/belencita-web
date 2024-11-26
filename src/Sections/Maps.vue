@@ -105,7 +105,7 @@ const changeCountry = (string) => {
             </swiper-container>
         </div>
         <!-- Desktop -->
-        <div class="hidden md:grid grid-cols-3 grid-rows-3 justify-center items-center pl-20 xl:pl-36 py-12 text-md xl:text-lg">
+        <div class="hidden max-h-[900px] md:grid grid-cols-3 grid-rows-3 justify-center items-center pl-20 xl:pl-36 py-12 text-md xl:text-lg">
             <div class="hidden lg:block col-start-1 row-start-1 z-[0] relative right-10"><DarkBlueGraphic/></div>
              <div v-if="country === 'spain'" class="pt-2 z-[99] col-start-1 col-span-3 row-start-1 row-span-3 animate-appear">
                 <h3 class="font-bold">From the southernmost part of Spain.</h3>
