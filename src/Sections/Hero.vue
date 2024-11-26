@@ -50,7 +50,7 @@ window.addEventListener('resize', () => {
 </script>
 
 <template>
-    <div class="h-[90vh] md:min-h-[750px] min-h-[700px] max-h-[1000px] grid grid-cols-5 grid-rows-10 md:grid-rows-5 relative overflow-hidden z-[50]">
+    <div class="h-[90vh] md:min-h-[750px] min-h-[700px] max-h-[900px] grid grid-cols-5 grid-rows-10 md:grid-rows-5 relative overflow-hidden z-[50]">
     <div class="px-5 row-start-1 sm:col-start-1 col-start-1 md:px-20 col-span-4 sm:col-span-3 md:row-start-3 md:col-start-1 self-end pb-1">
       <Belencita/>
     </div>
@@ -59,9 +59,13 @@ window.addEventListener('resize', () => {
       <h2 class="text-yellow ml-[10px] md:ml-0 md:text-darkpink col-span-4 font-subtitle text-xs md:text-md justify-self-end 2xl:justify-self-start z-[99]">Just a Wicked Woke Witch</h2>
     </div>
     <!-- image -->
-     <div :style="{ position: 'absolute', top: secondElementY + 'px' }" class="z-[79] overflow-x-hidden max-w-screen translate-y-[-70%] md:translate-y-[-87%] left-[20vw] md:left-[60vw]">
-      <img id="img-belen" class="max-w-[60vw] overflow-x-hidden md:max-w-[35vw] lg:max-h-[500px]" src="/mehqsmall.png" alt="">
+     <div class="z-[79] translate-y-[-30px] md:translate-y-[-5px] max-w-[200px] md:min-w-[0px] md:max-w-[35vw] lg:max-h-[500px] row-start-5 col-start-2 z-[99] col-span-4 row-span-3 flex justify-center items-center md:col-start-4 md:row-start-2">
+      <img id="img-belen" class="min-w-[150px] md:min-w-[0px] md:max-w-[35vw] max-w-[200px] lg:max-h-[500px]" src="/mehqsmall.png" alt="">
     </div>
+    <!-- image -->
+     <!-- <div :style="{ position: 'absolute', top: secondElementY + 'px' }" class="z-[79] overflow-x-hidden max-w-screen translate-y-[-70%] md:translate-y-[-87%] left-[20vw] md:left-[60vw]">
+      <img id="img-belen" class="max-w-[60vw] overflow-x-hidden md:max-w-[35vw] lg:max-h-[500px]" src="/mehqsmall.png" alt="">
+    </div> -->
     <!-- Spinner -->
     <div class="md:col-start-1 col-start-2 w-fit h-fit row-start-3 row-span-3 col-span-3 md:col-span-1 md:row-span-1 md:row-start-1 justify-self-end md:justify-self-center animate-spin-slow">
       <img class="w-[150px] h-[150px] p-5" src="/spinner.png" alt="">
