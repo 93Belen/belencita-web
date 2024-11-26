@@ -65,10 +65,10 @@ const changeCountry = (string) => {
 
 
 <template>
-<div class="bg-white w-full">
-    <div class="maps border-l-2 border-black w-[50vw] h-full hidden 2xl:block absolute h-[900px] z-[0] right-0"></div>
+<div class="bg-white w-full max-h-[900px]">
+    <div class="maps border-l-2 border-black w-[50vw] hidden 2xl:block absolute max-h-[900px] h-[900px] z-[0] right-0"></div>
 
-    <div class="bg-white md:min-h-[750px] max-w-[1900px] m-auto min-h-[700px] max-h-[900px] overflow-hidden h-fit py-10 md:py-0 md:min-h-[75vh] 2xl:h-[70vh] border-b-2 border-black md:grid md:grid-rows-1 md:grid-cols-[40%_60%] text-black">
+    <div class="bg-white md:min-h-[750px] max-w-[1900px] m-auto md:max-h-[900px] overflow-hidden h-fit py-10 md:py-0 md:min-h-[75vh] 2xl:h-[70vh] border-b-2 border-black md:grid md:grid-rows-1 md:grid-cols-[40%_60%] text-black">
         <!-- Mobile Cards Carousel -->
         <div class="md:hidden p-2 pt-5 md:p-20 h-fit">
             <!-- Slider main container -->
