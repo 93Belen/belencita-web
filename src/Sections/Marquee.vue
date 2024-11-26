@@ -8,6 +8,8 @@ import Matter from '../components/Tech/Matter.vue'
 import Three from '../components/Tech/Three.vue'
 import Ml5 from '../components/Tech/Ml5.vue'
 import Pinia from '../components/Tech/Pinia.vue'
+import Gsap from '../components/Tech/Gsap.vue'
+
 
 
 
@@ -20,6 +22,7 @@ import Pinia from '../components/Tech/Pinia.vue'
                 <React/>
                 <Tailwind/>
                 <Vue/>
+                <Gsap/>
                 <MaterialUI/>
                 <Matter/>
                 <Socket/>
@@ -32,6 +35,7 @@ import Pinia from '../components/Tech/Pinia.vue'
                     <React/>
                     <Tailwind/>
                     <Vue/>
+                    <Gsap/>
                     <MaterialUI/>
                     <Matter/>
                     <Socket/>
