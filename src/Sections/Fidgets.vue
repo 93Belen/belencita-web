@@ -21,7 +21,8 @@ window.addEventListener('resize', () => {
 </script>
 
 <template>
-    <div class="h-[70vh] md:min-h-[750px] min-h-[700px] max-h-[1000px] overflow-hidden md:h-screen w-screen bg-white pt-10">
+<div class="bg-white">
+    <div class="h-[70vh] max-w-[1900px] m-auto md:min-h-[750px] max-h-[1000px] overflow-hidden md:h-screen w-screen bg-white pt-10">
        <div :role="mobile? 'tablist' : ''" :class="mobile ? 'tabs tabs-lifted grid-cols-5' : 'h-full md:grid grid-cols-3 grid-rows-4'">
            <input v-if="mobile" type="radio" name="my_tabs_2" role="tab" class="tab bg-purple tab-active [--tab-bg:#CEBAF0] [--tab-border-color:transparent]" aria-label="" />
             <div :role="mobile? 'tabpanel' : ''" :class="mobile? 'tab-content bg-purple p-6 h-[70vh]':'mockup-window bg-purple border'">
@@ -58,6 +59,8 @@ window.addEventListener('resize', () => {
             </div>
        </div>
     </div>
+</div>
+
 </template>
 
 <style scoped>

@@ -50,7 +50,11 @@ window.addEventListener('resize', () => {
 </script>
 
 <template>
-    <div class="h-[600px] md:h-[800px] 2xl:h-[1065px] grid grid-cols-5 grid-rows-10 md:grid-rows-5 relative overflow-hidden z-[50]">
+<div class="h-[600px] row-start-1 row-span-10 md:row-span-5 md:h-[800px] 2xl:h-[1065px] grid grid-cols-5 grid-rows-10 md:grid-rows-5 relative overflow-hidden z-[50]">
+      <div id="yellow-area" class="bg-yellow col-start-1 w-full h-full absolute z-[10] row-start-7 col-span-5 row-span-4 md:row-start-4 col-start-1"></div>
+
+
+    <div class="h-[600px] row-start-1 row-span-10 md:row-span-5 max-w-[1900px] m-auto md:h-[800px] 2xl:h-[1065px] grid grid-cols-5 col-span-5 grid-rows-10 md:grid-rows-5 relative overflow-hidden z-[50]">
     <div class="px-5 row-start-1 sm:col-start-1 col-start-1 md:px-20 col-span-4 sm:col-span-3 md:row-start-3 md:col-start-1 self-end pb-1">
       <Belencita/>
     </div>
@@ -93,6 +97,7 @@ window.addEventListener('resize', () => {
       <a target="_blank" href="https://www.instagram.com/troy_m_kingston/"><TroysInstagram/></a>
     </div>
   </div>
+</div>
 </template>
 
 
