@@ -1,5 +1,5 @@
 <template>
-    <div class="h-[90vh] md:h-screen">
+    <div class="h-[90vh] bg-white md:h-screen">
 
     </div>
 </template>

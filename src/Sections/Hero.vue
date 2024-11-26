@@ -50,7 +50,7 @@ window.addEventListener('resize', () => {
 </script>
 
 <template>
-    <div class="h-[90vh] md:min-h-[750px] min-h-[700px] grid grid-cols-5 grid-rows-10 md:grid-rows-5 relative overflow-hidden z-[50]">
+    <div class="h-[90vh] md:min-h-[750px] min-h-[700px] max-h-[1000px] grid grid-cols-5 grid-rows-10 md:grid-rows-5 relative overflow-hidden z-[50]">
     <div class="px-5 row-start-1 sm:col-start-1 col-start-1 md:px-20 col-span-4 sm:col-span-3 md:row-start-3 md:col-start-1 self-end pb-1">
       <Belencita/>
     </div>
