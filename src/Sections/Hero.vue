@@ -20,7 +20,8 @@ gsap.registerPlugin(ScrollTrigger)
 onMounted(() => {
     gsap.to(".social-media", {
         transform: "scale(0.9) rotateZ(25deg)",   
-        duration: 0.1,                          
+        duration: 0.2,
+        ease: "power2.out",                          
         scrollTrigger: {
             trigger: "#hero-section",           
             start: "60vh top",               
