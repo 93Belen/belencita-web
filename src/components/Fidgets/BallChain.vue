@@ -58,7 +58,7 @@ onMounted(() => {
     divWidth = fidgetWindow.clientWidth
     divHeight = fidgetWindow.clientHeight
 
-    canvas.height = window.innerHeight
+    canvas.height = 400
     canvas.width = window.innerWidth
 
 
