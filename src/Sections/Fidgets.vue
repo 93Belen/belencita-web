@@ -15,7 +15,8 @@ onMounted(() => {
     }
 
     gsap.to("#monster2", {
-        x: "-60vw",  // Move the SVG to the left by 100% of its width (adjust this as needed)
+        x: "-60vw",
+        opacity: 1,  // Move the SVG to the left by 100% of its width (adjust this as needed)
         ease: "power2.out",  // Apply easing, e.g., ease out
         scrollTrigger: {
             trigger: "#desktop-fidget-div",      // The element to trigger the animation
@@ -77,7 +78,7 @@ window.addEventListener('resize', () => {
        </div>
     </div>
     <!-- Monster -->
-    <div id="monster2" class="relative bottom-[320px] z-[9999] left-[100vw] w-[300px] h-[300px] hidden md:block"><Monster2/></div>
+    <div id="monster2" class="relative bottom-[320px] z-[9999] left-[100vw] w-[300px] h-[300px] hidden md:block opacity-0"><Monster2/></div>
 </div>
 
 </template>

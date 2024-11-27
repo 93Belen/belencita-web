@@ -27,7 +27,18 @@ onMounted(() => {
         inertia: true
     })
     gsap.to("#monster", {
-        x: "40vw",  // Move the SVG to the left by 100% of its width (adjust this as needed)
+        x: "40vw",
+        opacity: 1,  // Move the SVG to the left by 100% of its width (adjust this as needed)
+        ease: "power2.out",  // Apply easing, e.g., ease out
+        scrollTrigger: {
+            trigger: "#desktop-maps-text",      // The element to trigger the animation
+            start: "top center",                   // Animation starts when the top of the trigger reaches the center of the viewport
+            end: "bottom center",                  // Animation ends when the bottom of the trigger reaches the top of the viewport         
+            scrub: true,                    // Syncs the animation with the scroll position, allows it to reverse                     
+        }
+    });
+    gsap.to("#monster-text", {
+        opacity: 1,  // Move the SVG to the left by 100% of its width (adjust this as needed)
         ease: "power2.out",  // Apply easing, e.g., ease out
         scrollTrigger: {
             trigger: "#desktop-maps-text",      // The element to trigger the animation
@@ -151,7 +162,7 @@ const changeCountry = (string) => {
             </div>
             <div class="hidden lg:block z-[0] col-start-3 row-start-3 relative left-10"><OrangeGraphic /></div>
             <!-- Monster -->
-            <div id="monster" class="relative left-[-150px] w-[300px]"><Monster/></div>
+            <div id="monster" class="relative left-[-150px] w-[300px] opacity-0"><Monster/></div>
         </div>
         <div id="map-div" class="w-full max-h-[900px] hidden md:grid md:grid-cols-6 md:grid-rows-6 text-white text-md font-medium font-alternates">
             <div id="maps" class=" maps border-l-2 border-black col-start-3 col-span-4 row-start-1 row-span-6"></div>
