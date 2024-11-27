@@ -88,7 +88,7 @@ const changeCountry = (string) => {
 
 
 <template>
-<div class="bg-white w-full max-h-[900px] border-b-2 border-black">
+<div id="desktop-maps-text" class="bg-white w-full max-h-[900px] 2xl:border-b-2 border-black">
     <div class="maps border-l-2 border-black border-b-2 border-black w-[50vw] hidden 2xl:block absolute max-h-[900px] h-[900px] z-[0] right-0"></div>
 
     <div class="bg-white md:min-h-[750px] max-w-[1900px] m-auto md:max-h-[900px] overflow-hidden h-fit py-10 md:py-0 border-b-2 border-black md:grid md:grid-rows-1 md:grid-cols-[40%_60%] text-black">
@@ -128,7 +128,7 @@ const changeCountry = (string) => {
             </swiper-container>
         </div>
         <!-- Desktop -->
-        <div id="desktop-maps-text" class="hidden max-h-[900px] md:grid grid-cols-3 grid-rows-3 justify-center items-center pl-20 xl:pl-36 py-12 text-md xl:text-lg">
+        <div class="hidden max-h-[900px] md:grid grid-cols-3 grid-rows-3 justify-center items-center pl-20 xl:pl-36 py-12 text-md xl:text-lg">
             <div class="hidden lg:block col-start-1 row-start-1 z-[0] relative right-10"><DarkBlueGraphic/></div>
              <div v-if="country === 'spain'" class="pt-2 z-[99] col-start-1 col-span-3 row-start-1 row-span-3 animate-appear">
                 <h3 class="font-bold">From the southernmost part of Spain.</h3>
@@ -151,8 +151,6 @@ const changeCountry = (string) => {
                 </p>
             </div>
             <div class="hidden lg:block z-[0] col-start-3 row-start-3 relative left-10"><OrangeGraphic /></div>
-            <!-- Monster -->
-            <div id="monster" class="relative left-[-150px] w-[150px] opacity-0"><Monster/></div>
         </div>
         <div id="map-div" class="w-full max-h-[900px] hidden md:grid md:grid-cols-6 md:grid-rows-6 text-white text-md font-medium font-alternates">
             <div id="maps" class=" maps border-l-2 border-black col-start-3 col-span-4 row-start-1 row-span-6"></div>
@@ -170,6 +168,8 @@ const changeCountry = (string) => {
             </div>
         </div>
     </div>
+            <!-- Monster -->
+        <div id="monster" class="relative bottom-[60px] md:bottom-[200px] left-[-50px] md:left-[-150px] z-[99999] md:w-[150px] w-[50px] opacity-0"><Monster/></div>
 </div>
 
 </template>
