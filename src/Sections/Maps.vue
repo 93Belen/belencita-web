@@ -169,7 +169,7 @@ const changeCountry = (string) => {
         </div>
     </div>
             <!-- Monster -->
-        <div id="monster" class="relative bottom-[60px] md:bottom-[200px] left-[-100px] md:left-[-150px] z-[99999] md:w-[150px] w-[50px] opacity-0"><Monster/></div>
+        <div id="monster" class="relative bottom-[60px] md:bottom-[200px] md:left-[-150px] z-[99999] md:w-[150px] w-[50px] opacity-0"><Monster/></div>
 </div>
 
 </template>
