@@ -1,12 +1,29 @@
 <script setup>
 import BallChain from '../components/Fidgets/BallChain.vue'
 import MovingLines from '../components/Fidgets/MovingLines.vue'
+import Monster2 from '../components/Monster2.vue'
 import { onMounted, ref } from 'vue'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
+
 let mobile = ref(true)
 onMounted(() => {
     if(window.innerWidth > 769){
         mobile.value = false
     }
+
+    gsap.to("#monster2", {
+        x: "-60vw",  // Move the SVG to the left by 100% of its width (adjust this as needed)
+        ease: "power2.out",  // Apply easing, e.g., ease out
+        scrollTrigger: {
+            trigger: "#desktop-fidget-div",      // The element to trigger the animation
+            start: "top center",                   // Animation starts when the top of the trigger reaches the center of the viewport
+            end: "bottom center",                  // Animation ends when the bottom of the trigger reaches the top of the viewport         
+            scrub: true,                    // Syncs the animation with the scroll position, allows it to reverse                     
+        }
+    });
 })
 
 window.addEventListener('resize', () => {
@@ -22,7 +39,7 @@ window.addEventListener('resize', () => {
 
 <template>
 <div class="bg-white">
-    <div class="h-[70vh] max-w-[1900px] m-auto md:min-h-[750px] max-h-[1000px] overflow-hidden md:h-screen w-screen bg-white pt-10">
+    <div id="desktop-fidget-div" class="h-[70vh] max-w-[1900px] m-auto md:min-h-[750px] max-h-[1000px] overflow-hidden md:h-screen w-screen bg-white pt-10">
        <div :role="mobile? 'tablist' : ''" :class="mobile ? 'tabs tabs-lifted grid-cols-5' : 'h-full md:grid grid-cols-3 grid-rows-4'">
            <input v-if="mobile" type="radio" name="my_tabs_2" role="tab" class="tab bg-purple tab-active [--tab-bg:#CEBAF0] [--tab-border-color:transparent]" aria-label="" />
             <div :role="mobile? 'tabpanel' : ''" :class="mobile? 'tab-content bg-purple p-6 h-[70vh]':'mockup-window bg-purple border'">
@@ -59,6 +76,8 @@ window.addEventListener('resize', () => {
             </div>
        </div>
     </div>
+    <!-- Monster -->
+    <div id="monster2" class="relative bottom-[320px] z-[9999] left-[100vw] w-[300px] h-[300px]"><Monster2/></div>
 </div>
 
 </template>

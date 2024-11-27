@@ -4,12 +4,16 @@ import Uk from '../components/Countries/Uk.vue'
 import Us from '../components/Countries/Us.vue'
 import DarkBlueGraphic from '../components/DarkBlueGraphic.vue'
 import OrangeGraphic from '../components/OrangeGraphic.vue'
+import Monster from '../components/Monster.vue'
 import {onMounted, onUnmounted, onUpdated, ref } from 'vue'
 import { register } from 'swiper/element/bundle';
 import anime from 'animejs/lib/anime.es.js';
 import { gsap } from 'gsap'
 import { Draggable } from 'gsap/Draggable'
-gsap.registerPlugin(Draggable)
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger, Draggable)
+
 
 // register Swiper custom elements
 register();
@@ -18,10 +22,20 @@ let animation;
 
 onMounted(() => {
     animateText()
-    Draggable.create(".country", {
+    Draggable.create([".country"], {
         bounds: document.getElementById('map-div'),
         inertia: true
     })
+    gsap.to("#monster", {
+        x: "40vw",  // Move the SVG to the left by 100% of its width (adjust this as needed)
+        ease: "power2.out",  // Apply easing, e.g., ease out
+        scrollTrigger: {
+            trigger: "#desktop-maps-text",      // The element to trigger the animation
+            start: "top center",                   // Animation starts when the top of the trigger reaches the center of the viewport
+            end: "bottom center",                  // Animation ends when the bottom of the trigger reaches the top of the viewport         
+            scrub: true,                    // Syncs the animation with the scroll position, allows it to reverse                     
+        }
+    });
 });
 
 const animateText = () => {
@@ -113,7 +127,7 @@ const changeCountry = (string) => {
             </swiper-container>
         </div>
         <!-- Desktop -->
-        <div class="hidden max-h-[900px] md:grid grid-cols-3 grid-rows-3 justify-center items-center pl-20 xl:pl-36 py-12 text-md xl:text-lg">
+        <div id="desktop-maps-text" class="hidden max-h-[900px] md:grid grid-cols-3 grid-rows-3 justify-center items-center pl-20 xl:pl-36 py-12 text-md xl:text-lg">
             <div class="hidden lg:block col-start-1 row-start-1 z-[0] relative right-10"><DarkBlueGraphic/></div>
              <div v-if="country === 'spain'" class="pt-2 z-[99] col-start-1 col-span-3 row-start-1 row-span-3 animate-appear">
                 <h3 class="font-bold">From the southernmost part of Spain.</h3>
@@ -136,6 +150,8 @@ const changeCountry = (string) => {
                 </p>
             </div>
             <div class="hidden lg:block z-[0] col-start-3 row-start-3 relative left-10"><OrangeGraphic /></div>
+            <!-- Monster -->
+            <div id="monster" class="relative left-[-150px] w-[300px]"><Monster/></div>
         </div>
         <div id="map-div" class="w-full max-h-[900px] hidden md:grid md:grid-cols-6 md:grid-rows-6 text-white text-md font-medium font-alternates">
             <div id="maps" class=" maps border-l-2 border-black col-start-3 col-span-4 row-start-1 row-span-6"></div>
