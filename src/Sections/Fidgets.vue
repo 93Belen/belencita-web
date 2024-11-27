@@ -77,7 +77,7 @@ window.addEventListener('resize', () => {
        </div>
     </div>
     <!-- Monster -->
-    <div id="monster2" class="relative bottom-[320px] z-[9999] left-[100vw] w-[300px] h-[300px]"><Monster2/></div>
+    <div id="monster2" class="relative bottom-[320px] z-[9999] left-[100vw] w-[300px] h-[300px] hidden md:block"><Monster2/></div>
 </div>
 
 </template>
