@@ -37,16 +37,6 @@ onMounted(() => {
             scrub: true,                    // Syncs the animation with the scroll position, allows it to reverse                     
         }
     });
-    gsap.to("#monster-text", {
-        opacity: 1,  // Move the SVG to the left by 100% of its width (adjust this as needed)
-        ease: "power2.out",  // Apply easing, e.g., ease out
-        scrollTrigger: {
-            trigger: "#desktop-maps-text",      // The element to trigger the animation
-            start: "top center",                   // Animation starts when the top of the trigger reaches the center of the viewport
-            end: "bottom center",                  // Animation ends when the bottom of the trigger reaches the top of the viewport         
-            scrub: true,                    // Syncs the animation with the scroll position, allows it to reverse                     
-        }
-    });
 });
 
 const animateText = () => {
