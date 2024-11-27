@@ -152,7 +152,7 @@ const changeCountry = (string) => {
             </div>
             <div class="hidden lg:block z-[0] col-start-3 row-start-3 relative left-10"><OrangeGraphic /></div>
             <!-- Monster -->
-            <div id="monster" class="relative left-[-150px] w-[300px] opacity-0"><Monster/></div>
+            <div id="monster" class="relative left-[-150px] w-[150px] opacity-0"><Monster/></div>
         </div>
         <div id="map-div" class="w-full max-h-[900px] hidden md:grid md:grid-cols-6 md:grid-rows-6 text-white text-md font-medium font-alternates">
             <div id="maps" class=" maps border-l-2 border-black col-start-3 col-span-4 row-start-1 row-span-6"></div>
