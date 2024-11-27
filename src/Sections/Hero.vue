@@ -10,47 +10,41 @@ import Instagram from '../components/Instagram.vue'
 import Spotify from '../components/Spotify.vue'
 import TroysInstagram from '../components/TroysInstagram.vue'
 import Image from '../components/Image.vue'
-
-
-
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import {onMounted, ref, watch } from 'vue'
 
+gsap.registerPlugin(ScrollTrigger)
 
-
-const firstElement = ref(null); // Ref for the first element
-const secondElementY = ref(0); // Y position for the second element
-
-
-
-const calculatePosition = () => {
-  firstElement.value = document.getElementById('yellow-area')
-  const img = document.getElementById('img-belen')
-  const position = img.getBoundingClientRect()
-  console.log(position.top)
-  if (firstElement.value) {
-    // Get the bounding box of the first element
-    const rect = firstElement.value.getBoundingClientRect();
-    secondElementY.value = rect.y; // Save the Y position
-  }
-};
 
 onMounted(() => {
-  calculatePosition(); // Calculate position when the component is mounted
+    gsap.to(".social-media", {
+        transform: "scale(0.9) rotateZ(25deg)",   
+        duration: 0.1,                          
+        scrollTrigger: {
+            trigger: "#hero-section",           
+            start: "60vh top",               
+            end: "bottom center",           
+            scrub: false,                   
+        },
+        yoyo: true,                             
+        repeat: 1,                               
+        delay: 1,
+        stagger: 0.1,                                 
+    });
 });
 
 
-window.addEventListener('resize', () => {
-  if(window.innerWidth > 700){
-  calculatePosition();
-  }
-});
+
+
+
 
 
 
 </script>
 
 <template>
-<div class="h-[600px] row-start-1 row-span-10 md:row-span-5 md:h-[800px] 2xl:h-[1065px] grid grid-cols-5 grid-rows-10 md:grid-rows-5 relative overflow-hidden z-[50]">
+<div id="hero-section" class="h-[600px] row-start-1 row-span-10 md:row-span-5 md:h-[800px] 2xl:h-[1065px] grid grid-cols-5 grid-rows-10 md:grid-rows-5 relative overflow-hidden z-[50]">
       <div id="yellow-area" class="bg-yellow col-start-1 w-full h-full absolute z-[10] row-start-7 col-span-5 row-span-4 md:row-start-4 col-start-1"></div>
 
 
@@ -66,10 +60,6 @@ window.addEventListener('resize', () => {
      <div class="h-[300px] top-[30px] w-[323px] md:h-[500px] md:w-[500px] row-start-3 relative left-[-70px] md:left-[-80px] col-start-2 md:top-[-35px] 2xl:top-[80px] z-[99] col-span-4 row-span-3 flex justify-center items-center md:col-start-4 md:row-start-2">
       <img id="img-belen" class="h-full" src="/mehqsmall.png" alt="">
     </div>
-    <!-- image -->
-     <!-- <div :style="{ position: 'absolute', top: secondElementY + 'px' }" class="z-[79] overflow-x-hidden max-w-screen translate-y-[-70%] md:translate-y-[-87%] left-[20vw] md:left-[60vw]">
-      <img id="img-belen" class="max-w-[60vw] overflow-x-hidden md:max-w-[35vw] lg:max-h-[500px]" src="/mehqsmall.png" alt="">
-    </div> -->
     <!-- Spinner -->
     <div class="md:col-start-1 col-start-2 w-fit h-fit row-start-3 row-span-3 col-span-3 md:col-span-1 md:row-span-1 md:row-start-1 justify-self-end md:justify-self-center animate-spin-slow">
       <img class="w-[150px] h-[150px] p-5" src="/spinner.png" alt="">
@@ -92,9 +82,9 @@ window.addEventListener('resize', () => {
 
     <!-- Instagram and Spotify -->
     <div class="row-start-9 md:row-start-5 flex justify-around md:justify-center md:gap-5 pl-4 col-span-3 md:gap-5 md:col-start-1 md:col-span-1 row-span-2 col-start-1 flex justify-center items-center">
-      <a target="_blank" href="https://www.instagram.com/evil_belencita/"><Instagram/></a>
-      <a target="_blank" href="https://open.spotify.com/user/31rngjcpxljttukxzph664vdkg6u"><Spotify/></a>
-      <a target="_blank" href="https://www.instagram.com/troy_m_kingston/"><TroysInstagram/></a>
+      <a class="social-media" target="_blank" href="https://www.instagram.com/evil_belencita/"><Instagram/></a>
+      <a class="social-media" target="_blank" href="https://open.spotify.com/user/31rngjcpxljttukxzph664vdkg6u"><Spotify/></a>
+      <a class="social-media" target="_blank" href="https://www.instagram.com/troy_m_kingston/"><TroysInstagram/></a>
     </div>
   </div>
 </div>

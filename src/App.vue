@@ -40,9 +40,9 @@ history.pushState(null, null, ' ');
 <!-- Hero Section -->
  <Hero/>
 <!-- Carousel Section -->
-  <Marquee id="mememe"/>
+  <Marquee />
 <!-- Maps Section -->
-  <Maps/>
+  <Maps id="mememe"/>
 <!-- Fidgets Section -->
   <Fidgets id="fidgets"/>
 <!-- Universe -->
