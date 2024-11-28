@@ -1,6 +1,8 @@
 <script setup>
 import BallChain from '../components/Fidgets/BallChain.vue'
 import MovingLines from '../components/Fidgets/MovingLines.vue'
+import Buttons from '../components/Fidgets/Buttons.vue'
+
 import Monster2 from '../components/Monster2.vue'
 import { onMounted, ref } from 'vue'
 import { gsap } from 'gsap'
@@ -50,10 +52,10 @@ window.addEventListener('resize', () => {
                 </div>
             </div>
             <input v-if="mobile" type="radio" name="my_tabs_2" role="tab" class="tab bg-orange [--tab-bg:#FDE3CE] [--tab-border-color:transparent]" aria-label="" />
-            <div :role="mobile? 'tabpanel' : ''" :class="mobile? 'tab-content bg-orange p-6 h-[70vh]':'mockup-window bg-orange border row-span-3'">
+            <div :role="mobile? 'tabpanel' : ''" :class="mobile? 'tab-content bg-orange h-[70vh]':'mockup-window bg-orange border row-span-3'">
                 <div class="md:hidden m-auto w-[90%] bg-[#ECECE9] h-[47px] rounded-xl my-2 p-3 text-xs"><p>https://belenmadefidgets.com/play</p></div>
-                <div class="md:bg-[#F4E5F1] flex justify-center h-full px-4 py-16">
-
+                <div class="md:bg-[#F4E5F1] flex justify-center h-full p-4">
+                    <Buttons/>
                 </div>
             </div>
             <input v-if="mobile" type="radio" name="my_tabs_2" role="tab" class="tab bg-pink [--tab-bg:#F1C0E8] [--tab-border-color:transparent]" aria-label="" />
