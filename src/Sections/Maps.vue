@@ -27,7 +27,7 @@ onMounted(() => {
         inertia: true
     })
     gsap.to("#monster", {
-        x: "50vw",
+        x: "60vw",
         opacity: 1,  // Move the SVG to the left by 100% of its width (adjust this as needed)
         ease: "power2.out",  // Apply easing, e.g., ease out
         scrollTrigger: {
@@ -169,7 +169,7 @@ const changeCountry = (string) => {
         </div>
     </div>
             <!-- Monster -->
-        <div id="monster" class="relative bottom-[60px] md:bottom-[200px] md:left-[-150px] 2xl:bottom-[50px] z-[99] md:w-[150px] w-[50px] opacity-0"><Monster/></div>
+        <div id="monster" class="relative bottom-[60px] left-[-30vw] md:bottom-[200px] md:left-[-150px] 2xl:bottom-[50px] z-[99] md:w-[150px] w-[50px] opacity-0"><Monster/></div>
 </div>
 
 </template>

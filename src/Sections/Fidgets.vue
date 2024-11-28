@@ -15,7 +15,7 @@ onMounted(() => {
     }
 
     gsap.to("#monster2", {
-        x: "-50vw",
+        x: "-55vw",
         opacity: 1,  // Move the SVG to the left by 100% of its width (adjust this as needed)
         ease: "power2.out",  // Apply easing, e.g., ease out
         scrollTrigger: {
