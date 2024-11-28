@@ -76,7 +76,7 @@ onMounted(() => {
     canvas.width = window.innerWidth < 769 ? window.innerWidth : window.innerWidth / 3
 
   // Create lines with more space between them
-  for (let y = 0; y < canvas.height; y += cellSize + gapSize) {
+  for (let y = 0; y < canvas.height + cellSize; y += cellSize + gapSize) {
     for (let x = 0; x < canvas.width + cellSize; x += cellSize + gapSize) {
       const random = Math.floor(Math.random() * colors.length);
       const line = new Line(colors[random], x, y);
