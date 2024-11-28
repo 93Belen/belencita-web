@@ -26,7 +26,8 @@ export default {
       'white': '#F9F8F9'
     },
     backgroundImage: {
-      'rainbow': 'linear-gradient(90deg, #FAF8CB, #FDE4CE, #FFCFD2, #F1C0E8, #CEBAF0, #A4C4F3, #90DBF4, #97F5E1, #B9FBC0)'
+      'rainbow': 'linear-gradient(90deg, #FAF8CB, #FDE4CE, #FFCFD2, #F1C0E8, #CEBAF0, #A4C4F3, #90DBF4, #97F5E1, #B9FBC0)',
+      'whitetoblue': 'linear-gradient(180deg, #F9F8F9, #D0F4DD, #8EECF5, #A4C4F3)'
     },
     fontSize: {
       'xs': '14px',

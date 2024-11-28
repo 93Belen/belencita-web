@@ -39,8 +39,8 @@ window.addEventListener('resize', () => {
 </script>
 
 <template>
-<div class="bg-white">
-    <div id="desktop-fidget-div" class="h-[400px] m-auto max-h-[70vh] md:max-w-[90vw] m-auto md:min-h-[750px] max-h-[1000px] overflow-hidden md:h-screen bg-white pt-10">
+<div class="bg-whitetoblue">
+    <div id="desktop-fidget-div" class="h-[450px] bg-transparent m-auto max-h-[70vh] md:max-w-[90vw] m-auto md:min-h-[750px] max-h-[1000px] overflow-hidden md:h-screen pt-10">
        <div :role="mobile? 'tablist' : ''" :class="mobile ? 'tabs tabs-lifted grid-cols-5 h-full' : 'h-full md:grid grid-cols-3 grid-rows-4'">
             <input checked v-if="mobile" type="radio" name="my_tabs_2" role="tab" class="tab bg-yellow [--tab-bg:#FAF8CB] [--tab-border-color:transparent]" aria-label="" />
             <div :role="mobile? 'tabpanel' : ''" :class="mobile? 'tab-content bg-yellow md:p-6 w-full h-full':'mockup-window bg-yellow border row-span-2 w-full h-full'">
@@ -63,8 +63,7 @@ window.addEventListener('resize', () => {
                     <MovingLines/>
                 </div>
             </div>
-            <input v-if="mobile" type="radio" name="my_tabs_2" role="tab" class="tab bg-blue [--tab-bg:#A4C4F3] [--tab-border-color:transparent]" aria-label="" />
-            <div :role="mobile? 'tabpanel' : ''" :class="mobile? 'tab-content bg-blue p-6 h-[70vh]':'mockup-window bg-blue border row-span-2'">
+            <div :role="mobile? 'tabpanel hidden' : ''" :class="mobile? 'tab-content bg-blue p-6 h-[70vh]':'mockup-window bg-blue border row-span-2'">
                 <div class="md:hidden m-auto w-[90%] bg-[#ECECE9] h-[47px] rounded-xl my-2 p-3 text-xs"><p>https://belenmadefidgets.com/play</p></div>
                 <div class="md:bg-[#EAF0F9] flex justify-center h-full px-4 py-16"></div>
             </div>

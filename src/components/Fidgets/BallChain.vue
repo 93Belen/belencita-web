@@ -58,7 +58,7 @@ onMounted(() => {
     divWidth = fidgetWindow.clientWidth
     divHeight = fidgetWindow.clientHeight
 
-    canvas.height = 400
+    canvas.height = 450
     canvas.width = window.innerWidth
 
 
@@ -72,7 +72,7 @@ onMounted(() => {
         let fixed = false
        if(i === 0 || i === 5 || i === 10){
            fixed = true
-           y = 25
+           y = 30
            console.log(fidgetWindow.clientWidth)
            if(canvas.width > 768){
            x = canvas.width / 7
