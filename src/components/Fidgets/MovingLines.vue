@@ -77,7 +77,7 @@ onMounted(() => {
 
   // Create lines with more space between them
   for (let y = 0; y < canvas.height; y += cellSize + gapSize) {
-    for (let x = 0; x < canvas.width; x += cellSize + gapSize) {
+    for (let x = 0; x < canvas.width + cellSize; x += cellSize + gapSize) {
       const random = Math.floor(Math.random() * colors.length);
       const line = new Line(colors[random], x, y);
       lines.value.push(line);
@@ -121,7 +121,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div @mousemove="handleMouseMove"  id="fidget-lines" class="w-full h-full m-auto bg-transparent overflow-hidden">
+  <div @mousemove="handleMouseMove"  id="fidget-lines" class="w-full h-full bg-transparent overflow-hidden">
     <canvas width="100%" height="100%" id="canvas-2" class="bg-transparent"></canvas>
   </div>
 </template>
