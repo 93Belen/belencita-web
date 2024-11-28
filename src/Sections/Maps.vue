@@ -91,7 +91,7 @@ const changeCountry = (string) => {
 <div id="desktop-maps-text" class="bg-white w-full max-h-[530px] md:max-h-[900px] 2xl:border-b-2 border-black">
     <div class="maps border-l-2 border-black border-b-2 border-black w-[50vw] hidden 2xl:block absolute max-h-[900px] h-[900px] z-[0] right-0"></div>
 
-    <div class="bg-white md:min-h-[750px] max-w-[1900px] m-auto md:max-h-[900px] overflow-hidden h-[530px] py-10 md:py-0 border-b-2 border-black md:grid md:grid-rows-1 md:grid-cols-[40%_60%] text-black">
+    <div class="bg-white md:min-h-[750px] max-w-[1900px] m-auto md:max-h-[900px] overflow-hidden h-[530px] py-10 md:py-0 2xl:border-b-0 border-b-2 border-black md:grid md:grid-rows-1 md:grid-cols-[40%_60%] text-black">
         <!-- Mobile Cards Carousel -->
         <div class="md:hidden p-2 pt-5 md:p-20 h-fit">
             <!-- Slider main container -->
@@ -169,7 +169,7 @@ const changeCountry = (string) => {
         </div>
     </div>
             <!-- Monster -->
-        <div id="monster" class="relative bottom-[60px] md:bottom-[200px] md:left-[-150px] z-[99] md:w-[150px] w-[50px] opacity-0"><Monster/></div>
+        <div id="monster" class="relative bottom-[60px] md:bottom-[200px] md:left-[-150px] 2xl:bottom-[50px] z-[99] md:w-[150px] w-[50px] opacity-0"><Monster/></div>
 </div>
 
 </template>
