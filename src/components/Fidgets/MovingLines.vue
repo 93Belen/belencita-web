@@ -80,7 +80,8 @@ onMounted(() => {
     }
   }
 
-
+    const div = document.getElementById('fidget-lines')
+    div.addEventListener('touchmove', handleTouch, { passive: false });
   // Start the animation loop
   animation();
 });
@@ -93,6 +94,21 @@ const handleMouseMove = (e) => {
 };
 
 
+const handleTouch = (e) => {
+  // Prevent default touch actions (e.g., scrolling or zooming)
+  e.preventDefault();
+
+  const rect = canvas.getBoundingClientRect();
+  // Get the first touch point (e.touches[0])
+  const touch = e.touches[0];
+
+  // Adjust the touch coordinates relative to the canvas
+  mouse.value.x = touch.clientX - rect.left; // Adjust for canvas position
+  mouse.value.y = touch.clientY - rect.top;  // Adjust for canvas position
+};
+
+
+
 onUnmounted(() => {
     cancelAnimationFrame(animationId)
 })
@@ -101,7 +117,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div @click.passive="handleMouseMove" @mousemove="handleMouseMove"  id="fidget-lines" class="w-full h-full m-auto bg-transparent overflow-hidden">
+  <div @mousemove="handleMouseMove"  id="fidget-lines" class="w-full h-full m-auto bg-transparent overflow-hidden">
     <canvas width="100%" height="100%" id="canvas-2" class="bg-transparent"></canvas>
   </div>
 </template>
