@@ -57,7 +57,7 @@ window.addEventListener('resize', () => {
                 </div>
             </div>
             <input v-if="mobile" type="radio" name="my_tabs_2" role="tab" class="tab bg-pink [--tab-bg:#F1C0E8] [--tab-border-color:transparent]" aria-label="" />
-            <div :role="mobile? 'tabpanel' : ''" :class="mobile? 'tab-content bg-pink h-[70vh]':'mockup-window bg-pink border row-span-3 col-start-1 row-start-2'">
+            <div :role="mobile? 'tabpanel' : ''" :class="mobile? 'tab-content bg-pink h-[400px]':'h-[400px] mockup-window bg-pink border row-span-3 col-start-1 row-start-2'">
                 <div class="md:hidden m-auto w-[90%] bg-[#ECECE9] h-[47px] rounded-xl my-2 p-3 text-xs"><p>https://belenmadefidgets.com/play</p></div>
                 <div class="md:bg-[#ECE6F6] flex justify-center h-full">
                     <MovingLines/>
