@@ -3,7 +3,7 @@ import { onMounted, ref, onUnmounted } from 'vue'
 
 let canvas, ctx;
 let cellSize = 7; // Increased size to reduce number of lines
-let gapSize = 1; // Increased gap to reduce number of lines
+let gapSize = 0; // Increased gap to reduce number of lines
 let lineLength = 20; // Increased length for better visibility
 let lineWidth = 4;
 let colors = [
