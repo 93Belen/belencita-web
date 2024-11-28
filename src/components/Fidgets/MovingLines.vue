@@ -2,10 +2,10 @@
 import { onMounted, ref, onUnmounted } from 'vue'
 
 let canvas, ctx;
-let cellSize = 10; // Increased size to reduce number of lines
-let gapSize = 5; // Increased gap to reduce number of lines
-let lineLength = 30; // Increased length for better visibility
-let lineWidth = 3;
+let cellSize = 7; // Increased size to reduce number of lines
+let gapSize = 1; // Increased gap to reduce number of lines
+let lineLength = 20; // Increased length for better visibility
+let lineWidth = 4;
 let colors = [
   '#8EECF5', '#CEBAF0', '#F1C0E8', '#D0F4DD', '#A4C4F3',
   '#8EECF5', '#F1C0E8', '#D0F4DD', '#CEBAF0', '#A4C4F3',
