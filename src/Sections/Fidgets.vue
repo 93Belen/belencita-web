@@ -42,7 +42,7 @@ window.addEventListener('resize', () => {
 <div class="bg-white">
     <div id="desktop-fidget-div" class="h-[400px] max-h-[70vh] md:max-w-[90vw] m-auto md:min-h-[750px] max-h-[1000px] overflow-hidden md:h-screen w-screen bg-white pt-10">
        <div :role="mobile? 'tablist' : ''" :class="mobile ? 'tabs tabs-lifted grid-cols-5 h-full' : 'h-full md:grid grid-cols-3 grid-rows-4'">
-            <input v-if="mobile" type="radio" name="my_tabs_2" role="tab" class="tab tab-active bg-yellow [--tab-bg:#FAF8CB] [--tab-border-color:transparent]" aria-label="" />
+            <input checked v-if="mobile" type="radio" name="my_tabs_2" role="tab" class="tab bg-yellow [--tab-bg:#FAF8CB] [--tab-border-color:transparent]" aria-label="" />
             <div :role="mobile? 'tabpanel' : ''" :class="mobile? 'tab-content bg-yellow md:p-6 w-full h-full':'mockup-window bg-yellow border row-span-2 w-full h-full'">
                 <div class="md:hidden m-auto w-[90%] bg-[#ECECE9] h-[47px] rounded-xl my-4 p-3 text-xs"><p>https://belenmadefidgets.com/play</p></div>
                 <div class="md:bg-[#FFFAF6] bg-[#FAF8CB] rounded-lg flex justify-center w-full h-full">
