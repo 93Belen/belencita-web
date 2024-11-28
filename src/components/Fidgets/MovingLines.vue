@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, ref } from 'vue'
+import { onMounted, ref, onUnmounted } from 'vue'
 
 let canvas, ctx;
 let cellSize = 10; // Increased size to reduce number of lines
@@ -81,24 +81,27 @@ onMounted(() => {
   }
 
 
-  const fidgetDiv = document.getElementById('fidget-lines')
-
-    // Mouse movement handler with throttling
-  const handleMouseMove = (e) => {
-    const rect = canvas.getBoundingClientRect();
-    mouse.value.x = e.clientX - rect.left;  // Adjust for canvas position
-    mouse.value.y = e.clientY - rect.top;   // Adjust for canvas position
-  };
-
-  fidgetDiv.addEventListener('mousemove', handleMouseMove);
-
   // Start the animation loop
   animation();
 });
+
+
+const handleMouseMove = (e) => {
+    const rect = canvas.getBoundingClientRect();
+    mouse.value.x = e.clientX - rect.left;  // Adjust for canvas position
+    mouse.value.y = e.clientY - rect.top;   // Adjust for canvas position
+};
+
+
+onUnmounted(() => {
+    cancelAnimationFrame(animationId)
+})
+
+
 </script>
 
 <template>
-  <div id="fidget-lines" class="w-full h-full m-auto bg-transparent overflow-hidden">
+  <div @click.passive="handleMouseMove" @mousemove="handleMouseMove"  id="fidget-lines" class="w-full h-full m-auto bg-transparent overflow-hidden">
     <canvas width="100%" height="100%" id="canvas-2" class="bg-transparent"></canvas>
   </div>
 </template>
