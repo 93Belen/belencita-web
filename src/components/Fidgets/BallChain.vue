@@ -72,7 +72,7 @@ onMounted(() => {
         let fixed = false
        if(i === 0 || i === 5 || i === 10){
            fixed = true
-           y = 30
+           y = 20
            console.log(fidgetWindow.clientWidth)
            if(canvas.width > 768){
            x = canvas.width / 6
