@@ -56,7 +56,7 @@ const keepTurning = () => {
 
 
 <template>
-    <div class="w-full h-[300px] md:h-full grid p-6 grid-cols-3 grid-rows-3 justify-center items-center">
+    <div class="w-full h-[300px] md:h-full grid md:p-6 grid-cols-3 grid-rows-3 justify-center items-center">
         <!-- Hue -->
         <div @click="keepTurning" :style="{ transform: `rotate(${hue}deg)` }" class="h-[70px] row-span-2">
              <Knob/>
