@@ -9,10 +9,9 @@ import {onMounted, onUnmounted, onUpdated, ref } from 'vue'
 import { register } from 'swiper/element/bundle';
 import anime from 'animejs/lib/anime.es.js';
 import { gsap } from 'gsap'
-import { Draggable } from 'gsap/Draggable'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-gsap.registerPlugin(ScrollTrigger, Draggable)
+gsap.registerPlugin(ScrollTrigger)
 
 
 // register Swiper custom elements
@@ -22,10 +21,6 @@ let animation;
 
 onMounted(() => {
     animateText()
-    Draggable.create([".country"], {
-        bounds: document.getElementById('map-div'),
-        inertia: true
-    })
     gsap.to("#monster", {
         x: "60vw",
         opacity: 1,  // Move the SVG to the left by 100% of its width (adjust this as needed)
