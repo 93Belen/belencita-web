@@ -1,6 +1,11 @@
 <script setup>
-import { onMounted, ref } from 'vue'
+import { onMounted, onUpdated, ref } from 'vue'
 import Knob from '../Knob.vue'
+import { gsap } from 'gsap'
+import { Draggable } from 'gsap/Draggable'
+
+gsap.registerPlugin(Draggable)
+
 const colors = {
       'darkpink': '#FF99C8',
       'pink': '#F1C0E8',
@@ -32,11 +37,11 @@ let hue = ref(0)
 
 
 const changeSat = () => {
-    if(sat.value < 100){
+    if(sat.value < 90){
         sat.value = sat.value + 10
     }
     else {
-        sat.value = 20
+        sat.value = 50
     }
 }
 
@@ -48,7 +53,20 @@ const keepTurning = () => {
         hue.value = 0
     }
 }
+onMounted(() => {
+    Draggable.create("#knob", {
+    type: "rotation",
+    inertia: true,
+    onDrag: function () {
+        keepTurning()
+    },
+    }); 
+})
 
+onUpdated(() => {
+    const knob = document.getElementById('knob')
+    console.log(knob.style.rotate)
+})
 
 
 </script>
@@ -58,8 +76,8 @@ const keepTurning = () => {
 <template>
     <div class="w-full h-[250px] md:h-full grid md:p-6 grid-cols-3 grid-rows-3 justify-center items-center">
         <!-- Hue -->
-        <div @click="keepTurning" :style="{ transform: `rotate(${hue}deg)` }" class="h-[70px] row-span-2">
-             <Knob/>
+        <div class="h-[70px] row-span-2">
+             <Knob id="knob" />
         </div>
         <!-- Sat -->
         <button @click="changeSat" class="w-[70px] h-[70px] border-4 rounded-full bg-white border-blue row-span-2 shadow-lg relative active:top-[4px] actie:shadow-none active:left-[2px]">TOUCH</button>
