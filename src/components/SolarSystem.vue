@@ -45,13 +45,11 @@ const colors = {
     const sun = new THREE.SphereGeometry(2, 30, 30);
     const sunMaterial = new THREE.MeshToonMaterial({ color: colors.yellow }); // Yellow color
     const sphere = new THREE.Mesh(sun, sunMaterial);
-    sphere.castShadow = true;
 
     // Planet 2 - Pink
     const planet2Geometry = new THREE.SphereGeometry(0.5, 30, 30);
     const planet2Material = new THREE.MeshToonMaterial({ color: colors.darkpink });
     const planet2 = new THREE.Mesh(planet2Geometry, planet2Material);
-    planet2.needsUpdate = true
 
     // Planet 3 - Green
     const planet3Geometry = new THREE.SphereGeometry(0.6, 30, 30);
@@ -73,31 +71,23 @@ const colors = {
 
 
     // Lights
-    const ambientLight = new THREE.AmbientLight(0x404040, 1); // Soft white light
 
-    const sunLight = new THREE.PointLight(0xFFFF00, 100); // color, intensity, distance
+    const sunLight = new THREE.PointLight(0xFFFF00, 500); // color, intensity, distance
     sunLight.position.set(sphere.position.x, sphere.position.y, sphere.position.z); // Position it at the center of the Sun
-    sunLight.castShadow = true; // Enable shadow casting for the light
+    sunLight.power = 2000
+    const sphereSize = 10;
+    const pointLightHelper = new THREE.PointLightHelper(sunLight, sphereSize );
+    scene.add( pointLightHelper );
 
-
-    planet2.castShadow = true
-    planet2.receiveShadow = true
-    planet3.castShadow = true
-    planet3.receiveShadow = true
-    planet4.castShadow = true
-    planet4.receiveShadow = true
-    planet5.castShadow = true
-    planet5.receiveShadow = true
 
     
     scene.add(sphere, planet2, planet3, planet4, planet5, sunLight);
 
     // Camera position
-    camera.position.z = 25;
-    camera.position.y = 4
+    camera.position.z = -250;
+    camera.position.y = 40
     camera.lookAt(sphere.position)
 
-    camera.updateProjectionMatrix();
 
     // Animation loop
     let angle = 0
@@ -114,14 +104,6 @@ const colors = {
         planet3.position.set(7 * Math.cos(angle + speeds.planet3), 0, 7 * Math.sin(angle + speeds.planet3));
         planet4.position.set(10 * Math.cos(angle + speeds.planet4), 0, 10 * Math.sin(angle + speeds.planet4));
         planet5.position.set(15 * Math.cos(angle + speeds.planet5), 0, 15 * Math.sin(angle + speeds.planet5));
-
-        // // Rotate planets around their own axes
-        // planet2.rotation.y += 50;  // Rotate planet2
-        // planet3.rotation.y += 2;  // Rotate planet3
-        // planet4.rotation.y += 15; // Rotate planet4
-        // planet5.rotation.y += 5; // Rotate planet5
-
-  camera.updateProjectionMatrix();
         renderer.render(scene, camera);
     };
 
