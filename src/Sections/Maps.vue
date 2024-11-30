@@ -90,10 +90,10 @@ const changeCountry = (string) => {
         <!-- Mobile Cards Carousel -->
         <div class="md:hidden p-2 pt-5 md:p-20 h-fit">
             <!-- Slider main container -->
-            <swiper-container class="mySwiper h-fit w-[85%] m-auto" effect="cards" grab-cursor="true">
+            <swiper-container class="mySwiper h-fit w-[85%] max-w-[350px] m-auto" effect="cards" grab-cursor="true">
             <swiper-slide class="flex p-3 items-center backdrop-blur-sm bg-white/50 w-[90%] flex-col h-full rounded-xl border-2 border-black">
                 <Spain/>
-                <div class="pt-2">
+                <div class="pt-0">
                     <h3 class="font-bold text-xs">From the southernmost part of Spain.</h3>
                     <p class="text-xs">
                     Almeria is the humble crossroads between Africa and Europe, Mediterranean at its core. I miss the narrow streets, 
