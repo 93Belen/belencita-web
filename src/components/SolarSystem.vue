@@ -131,5 +131,5 @@ const colors = {
 </script>
 
 <template>
-    <div id="solar-system-div" class="w-full h-full"></div>
+    <div id="solar-system-div" class="w-screen md:w-full h-full md:rotate-[-10deg]"></div>
 </template>
