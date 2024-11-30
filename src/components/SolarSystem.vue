@@ -75,9 +75,6 @@ const colors = {
     const sunLight = new THREE.PointLight(0xFFFF00, 500); // color, intensity, distance
     sunLight.position.set(sphere.position.x, sphere.position.y, sphere.position.z); // Position it at the center of the Sun
     sunLight.power = 2000
-    const sphereSize = 10;
-    const pointLightHelper = new THREE.PointLightHelper(sunLight, sphereSize );
-    scene.add( pointLightHelper );
 
 
     
