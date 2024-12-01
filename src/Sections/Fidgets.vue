@@ -54,7 +54,7 @@ window.addEventListener('resize', () => {
             <input v-if="mobile" type="radio" name="my_tabs_2" role="tab" class="tab bg-orange [--tab-bg:#FDE3CE] [--tab-border-color:transparent]" aria-label="" />
             <div :role="mobile? 'tabpanel' : ''" :class="mobile? 'tab-content bg-orange h-[70vh]':'h-[550px] mockup-window bg-orange border row-span-3'">
                 <div class="md:hidden m-auto w-[90%] bg-[#ECECE9] h-[47px] rounded-xl my-2 p-3 text-xs"><p>https://belenmadefidgets.com/play</p></div>
-                <div class="md:bg-[#F4E5F1] flex justify-center h-full p-4">
+                <div class="md:bg-[#F4E5F1] flex justify-center h-full pt-6 md:p-4">
                     <Buttons/>
                 </div>
             </div>

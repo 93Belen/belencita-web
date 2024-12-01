@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full h-full">
+    <div class="w-[60%] max-w-[170px] h-[60%] md:w-full md:h-full">
 <svg width="100%" height="100%" viewBox="0 0 200 206" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M147.389 66.9448L165.832 57.0798L181.229 16.9489" stroke="#D66BA0" stroke-width="30" stroke-linecap="round"/>
 <path d="M134.248 52.582L144.135 31.7683L179.39 17.0489" stroke="#D66BA0" stroke-width="30" stroke-linecap="round"/>

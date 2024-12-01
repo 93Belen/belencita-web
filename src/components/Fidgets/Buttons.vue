@@ -54,7 +54,7 @@ onUpdated(() => {
             </div>
         </div>
         <!-- turn -->
-        <div class="md:h-[70px] h-[90%] w-[90%]">
+        <div class="md:h-[70px] w-screen md:w-auto p-0 flex justify-center items-center">
              <Knob id="knob" />
         </div>
         <!-- press -->
