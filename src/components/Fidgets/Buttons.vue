@@ -61,15 +61,15 @@ onUpdated(() => {
         <button class="w-[70px] h-[70px] border-4 rounded-full col-start-3 bg-white border-blue shadow-lg relative active:top-[4px] actie:shadow-none active:left-[2px]">TOUCH</button>
         <!-- more slide -->
          <div class="col-start-1 row-start-3 flex col-span-3 items-end pt-6 md:pt-0 justify-around">
-            <div class="slider-y-bar w-full bg-[#D66BA0] rounded-full h-[80px] md:h-[110px] w-[5px]">
+            <div class="slider-y-bar bg-[#D66BA0] rounded-full h-[80px] md:h-[110px] w-[5px]">
                 <div class="slider-y w-[30px] h-[7px] border-black bg-yellow flex justify-center items-center relative left-[-12px] border-[1px]">
                 </div>
             </div>
-            <div class="slider-y-bar w-full bg-[#D66BA0] rounded-full h-[80px] md:h-[110px] w-[5px]">
+            <div class="slider-y-bar bg-[#D66BA0] rounded-full h-[80px] md:h-[110px] w-[5px]">
                 <div class="slider-y w-[30px] h-[7px] border-black bg-lightblue flex justify-center items-center relative left-[-12px] border-[1px]">
                 </div>
             </div>
-            <div class="slider-y-bar w-full bg-[#D66BA0] rounded-full h-[80px] md:h-[110px] w-[5px]">
+            <div class="slider-y-bar bg-[#D66BA0] rounded-full h-[80px] md:h-[110px] w-[5px]">
                 <div class="slider-y w-[30px] h-[7px] border-black bg-green flex justify-center items-center relative left-[-12px] border-[1px]">
                 </div>
             </div>
