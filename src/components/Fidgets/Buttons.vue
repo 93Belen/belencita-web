@@ -6,53 +6,6 @@ import { Draggable } from 'gsap/Draggable'
 
 gsap.registerPlugin(Draggable)
 
-const colors = {
-      'darkpink': '#FF99C8',
-      'pink': '#F1C0E8',
-      'yellow': '#FCF6BD',
-      'purple': '#CEBAF0',
-      'green': '#D0F4DD',
-      'orange': '#FDE3CE',
-      'lightblue': '#8EECF5',
-      'blue': '#A4C4F3',
-      'transparent': 'transparent',
-    }
-
-const hueRange = [
-  38,   // orange (#FDE3CE)
-  54,   // yellow (#FCF6BD)
-  141,  // green (#D0F4DD)
-  196,  // lightblue (#8EECF5)
-  211,  // blue (#A4C4F3)
-  270,  // purple (#CEBAF0)
-  328,  // darkpink (#FF99C8)
-  340   // pink (#F1C0E8)
-];
-
-
-
-let light = ref(50)
-let sat = ref(60)
-let hue = ref(0)
-
-
-const changeSat = () => {
-    if(sat.value < 90){
-        sat.value = sat.value + 10
-    }
-    else {
-        sat.value = 50
-    }
-}
-
-const keepTurning = () => {
-    if(hue.value < 300){
-        hue.value = hue.value + 45
-    }
-    else{
-        hue.value = 0
-    }
-}
 onMounted(() => {
     Draggable.create("#knob", {
     type: "rotation",
@@ -60,7 +13,24 @@ onMounted(() => {
     onDrag: function () {
         keepTurning()
     },
-    }); 
+    });
+    
+    Draggable.create("#slider", {
+    type: "x",
+    inertia: true,
+    bounds: '#slider-bar',
+    onDrag: function () {
+        keepTurning()
+    },
+    });
+    Draggable.create(".slider-y", {
+    type: "y",
+    inertia: true,
+    bounds: '.slider-y-bar',
+    onDrag: function () {
+        keepTurning()
+    },
+    });
 })
 
 onUpdated(() => {
@@ -75,22 +45,34 @@ onUpdated(() => {
 
 <template>
     <div class="w-full h-[250px] md:h-full grid md:p-6 grid-cols-3 grid-rows-3 justify-center items-center">
-        <!-- Hue -->
-        <div class="h-[70px] row-span-2">
+        <!-- slide -->
+        <div class="col-span-3 col-start-1 row-start-1">
+            <div id="slider-bar" class="w-full bg-darkpink rounded-full h-[10px]">
+                <div id="slider" class="w-[50px] h-[50px] border-black rounded-full bg-purple flex justify-center items-center relative top-[-21px]">
+                    <div class="w-[20px] h-[20px] rounded-full bg-green"></div>
+                </div>
+            </div>
+        </div>
+        <!-- turn -->
+        <div class="h-[70px]">
              <Knob id="knob" />
         </div>
-        <!-- Sat -->
-        <button @click="changeSat" class="w-[70px] h-[70px] border-4 rounded-full bg-white border-blue row-span-2 shadow-lg relative active:top-[4px] actie:shadow-none active:left-[2px]">TOUCH</button>
-        <!-- Light -->
-            <input 
-            type="range" 
-            v-model="light" 
-            min="50" 
-            max="75" 
-            value="1" 
-            :style="{ '--range-shdw': `hsl(${hueRange[3]}, ${50}%, ${light}%)` }"
-            class="range col-span-3 col-start-1 row-start-1" />
-        <!-- Color div -->
-        <div :style="{backgroundImage: `linear-gradient(40deg, hsl(${hueRange[hue/45]}, ${sat}%, ${light}%), hsl(${hueRange[hue/45]}, ${sat - 10}%, ${light + 5}%))`}" class="col-start-3 row-span-2 w-full h-full rounded-xl border-2 border-black"></div>
+        <!-- press -->
+        <button class="w-[70px] h-[70px] border-4 rounded-full col-start-3 bg-white border-blue shadow-lg relative active:top-[4px] actie:shadow-none active:left-[2px]">TOUCH</button>
+        <!-- more slide -->
+         <div class="col-start-1 row-start-3 flex col-span-3 justify-around">
+            <div class="slider-y-bar w-full bg-[#D66BA0] rounded-full h-[110px] w-[5px]">
+                <div class="slider-y w-[30px] h-[7px] border-black bg-yellow flex justify-center items-center relative left-[-12px] border-[1px]">
+                </div>
+            </div>
+            <div class="slider-y-bar w-full bg-[#D66BA0] rounded-full h-[110px] w-[5px]">
+                <div class="slider-y w-[30px] h-[7px] border-black bg-lightblue flex justify-center items-center relative left-[-12px] border-[1px]">
+                </div>
+            </div>
+            <div class="slider-y-bar w-full bg-[#D66BA0] rounded-full h-[110px] w-[5px]">
+                <div class="slider-y w-[30px] h-[7px] border-black bg-green flex justify-center items-center relative left-[-12px] border-[1px]">
+                </div>
+            </div>
+        </div>
     </div>
 </template>
