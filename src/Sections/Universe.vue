@@ -45,7 +45,7 @@ onMounted(() => {
         class="sticker w-[70px] h-[70px] md:w-[150px] md:h-[150px] relative">
             <img width="auto" height="100%" :src="'/stickers/'+image+'.png'" alt="">
         </div>
-        <div class="col-start-1 relative left-[-10vw] md:left-0 md:top-[-10vh] z-[80] col-span-3 row-start-2 z-[0] md:block md:col-start-4 md:row-start-1 md:col-span-3 md:row-span-2">
+        <div class="col-start-1 relative left-[-10vw] md:left-0 md:top-[-10vh] z-[0] col-span-3 row-start-2 z-[0] md:block md:col-start-4 md:row-start-1 md:col-span-3 md:row-span-2">
             <SolarSystem/>
         </div>
     </div>
