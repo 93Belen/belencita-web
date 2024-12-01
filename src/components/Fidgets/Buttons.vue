@@ -88,7 +88,7 @@ onUpdated(() => {
             min="50" 
             max="75" 
             value="1" 
-            :style="{ '--range-shdw': `hsl(${hueRange[3]}, ${sat}%, ${light}%)` }"
+            :style="{ '--range-shdw': `hsl(${hueRange[3]}, ${50}%, ${light}%)` }"
             class="range col-span-3 col-start-1 row-start-1" />
         <!-- Color div -->
         <div :style="{backgroundImage: `linear-gradient(40deg, hsl(${hueRange[hue/45]}, ${sat}%, ${light}%), hsl(${hueRange[hue/45]}, ${sat - 10}%, ${light + 5}%))`}" class="col-start-3 row-span-2 w-full h-full rounded-xl border-2 border-black"></div>
