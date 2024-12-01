@@ -11,7 +11,7 @@ onMounted(() => {
     const scene = new THREE.Scene();
   // Set up the Orthographic Camera
     const aspectRatio = sizes.width / sizes.height;
-    const cameraSize = 35;  // This controls the visible area of the camera
+    const cameraSize = 23;  // This controls the visible area of the camera
     const camera = new THREE.OrthographicCamera(
         cameraSize * aspectRatio,  // left plane
         -cameraSize * aspectRatio,   // right plane
@@ -85,14 +85,9 @@ const colors = {
     const planet7 = new THREE.Mesh(planet7Geometry, planet7Material);
 
 
-    // Planet 9 - Blue
-    const planet9Geometry = new THREE.SphereGeometry(1.8, 30, 30);
-    const planet9Material = new THREE.MeshBasicMaterial({ color: colors.orange });
-    const planet9 = new THREE.Mesh(planet9Geometry, planet9Material);
-
 
     
-    scene.add(sphere, planet2, planet3, planet4, planet5, planet6, planet7, planet9);
+    scene.add(sphere, planet2, planet3, planet4, planet5, planet6, planet7);
 
     // Camera position
     camera.position.z = -250;
@@ -109,8 +104,6 @@ const colors = {
         planet5: 5.2,
         planet6: 3.3,
         planet7: 1,
-        planet8: 0.5,
-        planet9: 0.3
     }
     let angles = {
         planet2: 0,
@@ -119,8 +112,6 @@ const colors = {
         planet5: 0,
         planet6: 0,
         planet7: 0,
-        planet8: 0,
-        planet9: 0
     };
 
     const animate = () => {
@@ -144,8 +135,6 @@ const colors = {
     angles.planet7 += 0.01 * speeds.planet7;  // Planet 7
     planet7.position.set(22 * Math.cos(angles.planet7), 0, 22 * Math.sin(angles.planet7));
 
-    angles.planet9 += 0.01 * speeds.planet9;  // Planet 9
-    planet9.position.set(30 * Math.cos(angles.planet9), 0, 30 * Math.sin(angles.planet9));
 
 
         controls.update()
