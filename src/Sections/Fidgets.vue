@@ -65,7 +65,7 @@ window.addEventListener('resize', () => {
                     <MovingLines/>
                 </div>
             </div>
-            <div :role="mobile? 'tabpanel hidden' : ''" :class="mobile? 'tab-content bg-blue p-6 h-[70vh]':'mockup-window bg-blue border row-span-2'">
+            <div class='hidden md:block mockup-window bg-blue border row-span-2'>
                 <div class="md:hidden m-auto w-[90%] bg-[#ECECE9] h-[47px] rounded-xl my-2 p-3 text-xs"><p>https://belenmadefidgets.com/play</p></div>
                 <div class="md:bg-[#EAF0F9] flex justify-center h-full px-4 py-16"></div>
             </div>

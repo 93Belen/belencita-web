@@ -4,8 +4,8 @@ import { onMounted, ref, onUnmounted } from 'vue'
 let canvas, ctx;
 let cellSize = 7; // Increased size to reduce number of lines
 let gapSize = 0; // Increased gap to reduce number of lines
-let lineLength = 10; // Increased length for better visibility
-let lineWidth = 4;
+let lineLength = 15; // Increased length for better visibility
+let lineWidth = 7;
 let colors = [
     '#8EECF5',  // lightblue
     '#CEBAF0',  // purple
@@ -18,6 +18,7 @@ let colors = [
 const lines = ref([]);
 const mouse = ref({ x: 0, y: 0 });
 const container = ref(null)
+let div;
 
 class Line {
   constructor(color, x, y) {
@@ -59,8 +60,12 @@ const animation = () => {
   if (delta > 1000 / 60) {
     ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the canvas
     lines.value.forEach(line => {
-      line.updateAngle(mouse.value.x, mouse.value.y); // Update line angle towards mouse
-      line.draw(); // Draw the line with the new angle
+      if(line.x < mouse.value.x + 30 && line.x > mouse.value.x - 30){
+        if(line.y < mouse.value.y + 30 && line.y > mouse.value.y - 30){
+          line.updateAngle(mouse.value.x, mouse.value.y); // Update line angle towards mouse
+        }       
+      }
+       line.draw(); // Draw the line with the new angle
     });
 
     lastTimestamp = now; // Update the last timestamp
@@ -84,7 +89,7 @@ onMounted(() => {
     }
   }
 
-    const div = document.getElementById('fidget-lines')
+    div = document.getElementById('fidget-lines')
     div.addEventListener('touchmove', handleTouch, { passive: false });
   // Start the animation loop
   animation();
@@ -112,6 +117,12 @@ const handleTouch = (e) => {
 };
 
 
+    window.addEventListener('resize', () => {
+    const sizes = div.getBoundingClientRect()
+    console.log(sizes)
+    canvas.width = sizes.width
+    canvas.height = sizes.height
+    })
 
 onUnmounted(() => {
     cancelAnimationFrame(animationId)
