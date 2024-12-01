@@ -74,12 +74,7 @@ const animation = () => {
   animationId = requestAnimationFrame(animation); // Request next frame
 };
 
-onMounted(() => {
-  canvas = document.getElementById('canvas-2');
-  ctx = canvas.getContext('2d');
-    canvas.height = 350
-    canvas.width = window.innerWidth < 769 ? window.innerWidth : window.innerWidth / 3
-
+const createLines = () => {
   // Create lines with more space between them
   for (let y = 0; y < canvas.height + cellSize; y += cellSize + gapSize) {
     for (let x = 0; x < canvas.width + cellSize; x += cellSize + gapSize) {
@@ -88,9 +83,19 @@ onMounted(() => {
       lines.value.push(line);
     }
   }
+}
+
+onMounted(() => {
+  canvas = document.getElementById('canvas-2');
+  ctx = canvas.getContext('2d');
+    canvas.height = 350
+    canvas.width = window.innerWidth < 769 ? window.innerWidth : window.innerWidth / 3
+
+  createLines()
 
     div = document.getElementById('fidget-lines')
     div.addEventListener('touchmove', handleTouch, { passive: false });
+    
   // Start the animation loop
   animation();
 });
@@ -122,6 +127,7 @@ const handleTouch = (e) => {
     console.log(sizes)
     canvas.width = sizes.width
     canvas.height = sizes.height
+    createLines()
     })
 
 onUnmounted(() => {
