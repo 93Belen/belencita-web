@@ -11,7 +11,7 @@ onMounted(() => {
     const scene = new THREE.Scene();
   // Set up the Orthographic Camera
     const aspectRatio = sizes.width / sizes.height;
-    const cameraSize = 23;  // This controls the visible area of the camera
+    const cameraSize = 21;  // This controls the visible area of the camera
     const camera = new THREE.OrthographicCamera(
         cameraSize * aspectRatio,  // left plane
         -cameraSize * aspectRatio,   // right plane
@@ -85,24 +85,70 @@ const colors = {
     const planet7 = new THREE.Mesh(planet7Geometry, planet7Material);
 
 
+    const createOrbit = (radius, segments) => {
+    // Create an array to store the vertices (circle points)
+    const points = [];
+    
+    // Generate the points along the circle
+    for (let i = 0; i < segments; i++) {
+        const angle = (i / segments) * Math.PI * 2;  // Angle for this point
+        const x = radius * Math.cos(angle);  // X position
+        const z = radius * Math.sin(angle);  // Z position
+        points.push(new THREE.Vector3(x, 0, z));  // Add the point to the array
+    }
+
+    // Create BufferGeometry and set the positions
+    const geometry = new THREE.BufferGeometry().setFromPoints(points);
+
+    // Create the material for the orbit line
+    const material = new THREE.LineBasicMaterial({ color: 0xFFFFFF, opacity: 0.3, transparent: true });
+
+    // Create the LineLoop to close the circle
+    const orbit = new THREE.LineLoop(geometry, material);
+
+    // Rotate the orbit to lie flat on the XZ plane
+    orbit.rotation.y = Math.PI / 2;
+
+    return orbit;
+};
+
+
+    // Create orbit paths for each planet
+    const orbit2 = createOrbit(4, 64);  // Orbit for planet 2
+    const orbit3 = createOrbit(7, 64);  // Orbit for planet 3
+    const orbit4 = createOrbit(9, 64);  // Orbit for planet 4
+    const orbit5 = createOrbit(13, 64); // Orbit for planet 5
+    const orbit6 = createOrbit(15, 64); // Orbit for planet 6
+    const orbit7 = createOrbit(20, 64); // Orbit for planet 7
+
+    // Add orbits to the scene
+    scene.add(orbit2);
+    scene.add(orbit3);
+    scene.add(orbit4);
+    scene.add(orbit5);
+    scene.add(orbit6);
+    scene.add(orbit7);
+
+
+
 
     
     scene.add(sphere, planet2, planet3, planet4, planet5, planet6, planet7);
 
     // Camera position
     camera.position.z = -250;
-    camera.position.y = 10
+    // camera.position.y = 100
     camera.lookAt(sphere.position)
 
 
     // Animation loop
     let angle = 0
     const speeds = {
-        planet2: 11,
-        planet3: 8.1,
-        planet4: 7.3,
-        planet5: 5.2,
-        planet6: 3.3,
+        planet2: 9,
+        planet3: 7.1,
+        planet4: 6.3,
+        planet5: 4.2,
+        planet6: 2.3,
         planet7: 1,
     }
     let angles = {
@@ -133,7 +179,7 @@ const colors = {
     planet6.position.set(15 * Math.cos(angles.planet6), 0, 15 * Math.sin(angles.planet6));
 
     angles.planet7 += 0.01 * speeds.planet7;  // Planet 7
-    planet7.position.set(22 * Math.cos(angles.planet7), 0, 22 * Math.sin(angles.planet7));
+    planet7.position.set(20 * Math.cos(angles.planet7), 0, 20 * Math.sin(angles.planet7));
 
 
 
