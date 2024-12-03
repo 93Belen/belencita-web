@@ -6,37 +6,26 @@ import { Draggable } from 'gsap/Draggable'
 
 gsap.registerPlugin(Draggable)
 
+
+
 onMounted(() => {
     Draggable.create("#knob", {
     type: "rotation",
     inertia: true,
-    onDrag: function () {
-        keepTurning()
-    },
     });
     
     Draggable.create("#slider", {
     type: "x",
     inertia: true,
     bounds: '#slider-bar',
-    onDrag: function () {
-        keepTurning()
-    },
     });
     Draggable.create(".slider-y", {
     type: "y",
     inertia: true,
     bounds: '.slider-y-bar',
-    onDrag: function () {
-        keepTurning()
-    },
     });
 })
 
-onUpdated(() => {
-    const knob = document.getElementById('knob')
-    console.log(knob.style.rotate)
-})
 
 
 </script>
