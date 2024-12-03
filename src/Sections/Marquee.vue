@@ -18,7 +18,7 @@ import Gsap from '../components/Tech/Gsap.vue'
 <template>
     <div class="h-fit md:h-[175px] bg-white border-y-2 border-black">
         <div class="relative flex overflow-x-hidden">
-            <div class="py-12 animate-marquee whitespace-nowrap flex gap-16">
+            <div class="py-12 animate-marquee whitespace-nowrap w-full justify-around flex gap-16">
                 <React/>
                 <Tailwind/>
                 <Vue/>
@@ -31,7 +31,7 @@ import Gsap from '../components/Tech/Gsap.vue'
                 <Ml5/>    
             </div>
 
-            <div class="absolute top-0 py-12 pl-10 animate-marquee2 flex gap-16 whitespace-nowrap">
+            <div class="absolute top-0 py-12 pl-10 animate-marquee2 w-full justify-around flex gap-16 whitespace-nowrap">
                     <React/>
                     <Tailwind/>
                     <Vue/>
